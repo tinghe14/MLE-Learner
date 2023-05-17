@@ -1,7 +1,9 @@
 # MLE-Learner
-This is a repository for organizing my notes related to MLE. 
+I listed several technical components which I think is important for MLE role. I tackle them one by one and organizing my notes in this repository.
 
 # Table of Contents (ongoing)
+
+> Under Bayes' theorem, no theory is perfect. Rather, it is a work in progress, always subject to further refinement and testing
 
 # Coding Language (foundation)
 https://python-web-guide.readthedocs.io/zh/latest/base/basics.html
