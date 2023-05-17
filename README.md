@@ -7,6 +7,7 @@ I listed several technical components which I think is important for MLE role. I
 
 # Coding Language (foundation)
 https://python-web-guide.readthedocs.io/zh/latest/base/basics.html
+https://khuyentran1401.github.io/Efficient_Python_tricks_and_tools_for_data_scientists/Chapter6/logging_debugging.html
 ## Python Features
 标题（描述下highlight）
 ## Object Orient Programming
