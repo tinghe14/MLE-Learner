@@ -20,7 +20,9 @@ grokking the low level design interview using OOD principles
 https://zhuanlan.zhihu.com/p/34223150
 ## Unit Test
 https://code.visualstudio.com/docs/python/testing
-
+## Web Development
+software framework: https://www.freecodecamp.org/news/what-is-a-framework-software-frameworks-definition/
+建立一个网站hold自己的model
 
 # Machine Learning System Design （high-priority）
 ## educative
@@ -46,6 +48,9 @@ my notes are in Notion
 
 # Natural Language Processing
 ## Basic Algorithms from scratch
+
+# Big Data
+## Spark
 
 # AIML in Production
 data science in productions: building scalable model pipelines
