@@ -3,7 +3,7 @@ I listed several technical components which I think is important for MLE role. I
 
 # Table of Contents (ongoing)
 
-> Under Bayes' theorem, no theory is perfect. Rather, it is a work in progress, always subject to further refinement and testing
+> Motivated Quote: Under Bayes' theorem, no theory is perfect. Rather, it is a work in progress, always subject to further refinement and testing
 
 # Coding Language (foundation)
 https://python-web-guide.readthedocs.io/zh/latest/base/basics.html
