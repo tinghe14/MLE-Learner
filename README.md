@@ -11,12 +11,15 @@ https://khuyentran1401.github.io/Efficient_Python_tricks_and_tools_for_data_scie
 ## Python Features
 标题（描述下highlight）
 ## Object Orient Programming
+1. [educative module: Object-Oriented Programming in Python](https://www.educative.io/module/learn-oop-in-python)
+  - 
 ## Vectorize: Numpy
 ## Basic Algorithms from scratch
 
 # Software Design and Unit Test （foundation）
 ## Object Orient Design
-grokking the low level design interview using OOD principles
+1. [educative module: grokking the low level design interview using OOD principles](https://www.educative.io/courses/grokking-the-low-level-design-interview-using-ood-principles)
+  - 
 ## Git
 https://zhuanlan.zhihu.com/p/34223150
 ## Unit Test
