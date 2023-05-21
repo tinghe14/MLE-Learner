@@ -10,9 +10,11 @@ https://python-web-guide.readthedocs.io/zh/latest/base/basics.html
 https://khuyentran1401.github.io/Efficient_Python_tricks_and_tools_for_data_scientists/Chapter6/logging_debugging.html
 ## Python Features
 标题（描述下highlight）
+1. educative module: Python 3: from beginner to advanced
+      - [note]()
 ## Object Orient Programming
 1. educative module: Learn Object-Oriented Programming in Python
-      - note
+      - [note]()
 ## Vectorize: Numpy
 ## Basic Algorithms from scratch
 
