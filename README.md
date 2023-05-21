@@ -6,15 +6,10 @@ I listed several technical components which I think is important for MLE role. I
 > Motivated Quote: Under Bayes' theorem, no theory is perfect. Rather, it is a work in progress, always subject to further refinement and testing
 
 markdown syntax shortcut:
-$`\textcolor{red}{\text{your text}}`$ 
-$`\textcolor{blue}{\text{your text}}`$ 
-$`\textcolor{green}{\text{your text}}`$
-```diff
-- RED text
-+ GREEN text
-! ORANGE text
-# GRAY text
-```
+- highlighter
+$`\textcolor{red}{\text{1}}`$ 
+$`\textcolor{blue}{\text{2}}`$ 
+$`\textcolor{green}{\text{3}}`$
 
 # Coding Language (foundation)
 https://python-web-guide.readthedocs.io/zh/latest/base/basics.html
