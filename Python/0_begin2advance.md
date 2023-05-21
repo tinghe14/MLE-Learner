@@ -108,3 +108,18 @@ age = int(input("How old are you, " + name + "? "))
 # if the user types in something can't be made into integer, this will result an error
 # error handling will be introduce later
 ~~~
+### Fuctions
+Functions are a series of statements that are used to perform a specific operation.
+two types of functions: built-in functions and custom-defined functions
+syntax of function:
+- def keyword along with the name of the function, a parehthesized list of parameters, and a colon. This is followed by the indented body of function
+- return keyword is used for stopping the execution of the function statement and allows you to return a value from the function
+- triple-quote string: to document the purpose of the function; documenting each function is optional but strongly recommend. 
+        - for any function with a documentation string. help(function_name) will print that string
+- every function returns a value
+        - if you don't specify a return value, the function will return None (This is an actual legal value of type NoneType, so you can assign it to a variable or ask if a variable is equal to it.)
+$`\textcolor{red}{\text{Local Function}}`$ :
+- a function may be defined within another function, and it becomes local to the function in which it has been defined
+### Coding Style Guide and Conventions惯例
+- Evaluating a function definition (def) causes the function to be defined, but it won’t be executed until some other statement calls it.
+- It is common for a program to consist of a collection of functions, with the last line of the program being a single top-level call to a “main” function
