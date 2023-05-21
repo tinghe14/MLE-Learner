@@ -87,7 +87,6 @@ n = 5
 while n > 0: # Will keep on running till n is greater than 0
   print(n)
   n -= 1 # Without this, it will get stuck in infinite loop
-  
 # same as 
 n = 6
 while (n := n - 1) > 0: # Decrementing and then checking if greater than 0 together
@@ -95,3 +94,17 @@ while (n := n - 1) > 0: # Decrementing and then checking if greater than 0 toget
 ~~~
 For loops are used for iterating over each element of sequence data types: strings, lists, tuples, etc.
 - range() function: range(a, b, c) will give the numbers a, a+c, a+c+c, a+c+c+c, etc., up to (or down to), but not including, b
+    - the value returned by a range() function is not a list, but rather an iterator, if need a list, use list(range(...))
+### Print and Import Statement
+not built in function can  be imported from other module, a module is just a file containing code
+### Input from the User
+- ask the user for input: input(_promopt_): If you omit the prompt, the user will be left staring at a blank screen and wondering why the program isn’t doing anything.
+~~~
+name = input("What is your name? ")
+print("Hello,", name)
+# the result of a call to input is always string. 
+#if you are expecting an integer or float, can use int or float functions
+age = int(input("How old are you, " + name + "? "))
+# if the user types in something can't be made into integer, this will result an error
+# error handling will be introduce later
+~~~
