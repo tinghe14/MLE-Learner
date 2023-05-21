@@ -1,7 +1,7 @@
 Course Contents
 1. Introduction
 2. [The Absolute Bare Minimum](#section_2): varaibles and data types, type conversion, basic operator, lists, stinrgs, statements and indentation, assignment statements, if statements, while and for loops, print and import statements, input from users, functions, coding styoe guide.
-4. Better Tools
+4. [Better Tools](#section_3): objects, lists, tuples, sets, dictionaries, string methods, loops for objects, [handling exceptions](#exceptions), type conversions, scope, file i/o, pickling
 5. Classes
 6. Getting Fancy
 7. Testing
@@ -171,3 +171,7 @@ def check_balance(brackets):
             break
     return check == 0
 ~~~
+
+# Better Tools
+<a id='section_3'></a>
+### Objects
