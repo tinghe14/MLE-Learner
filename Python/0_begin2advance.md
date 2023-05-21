@@ -36,4 +36,4 @@ arithmetic operators:
 - addition, substraction, multiplication, exponentiation, division(/), interger divide(//, round down), modulus(%, remainder of division)
 - order of precedence:
     - from highest precedence to the lowest one: (), **, * and /, + and -
-    - multiple expoentiations are done <span style="color:red">right to left</span>
+    - multiple expoentiations are done $`\textcolor{red}{\text{right to left}}`$
