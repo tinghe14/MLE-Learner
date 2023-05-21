@@ -115,11 +115,59 @@ syntax of function:
 - def keyword along with the name of the function, a parehthesized list of parameters, and a colon. This is followed by the indented body of function
 - return keyword is used for stopping the execution of the function statement and allows you to return a value from the function
 - triple-quote string: to document the purpose of the function; documenting each function is optional but strongly recommend. 
-        - for any function with a documentation string. help(function_name) will print that string
+    - for any function with a documentation string. help(function_name) will print that string
 - every function returns a value
-        - if you don't specify a return value, the function will return None (This is an actual legal value of type NoneType, so you can assign it to a variable or ask if a variable is equal to it.)
+    - if you don't specify a return value, the function will return None (This is an actual legal value of type NoneType, so you can assign it to a variable or ask if a variable is equal to it.)
+        
 $`\textcolor{red}{\text{Local Function}}`$ :
 - a function may be defined within another function, and it becomes local to the function in which it has been defined
 ### Coding Style Guide and Conventions惯例
 - Evaluating a function definition (def) causes the function to be defined, but it won’t be executed until some other statement calls it.
 - It is common for a program to consist of a collection of functions, with the last line of the program being a single top-level call to a “main” function
+### Test
+1. write a function checks whether the given number is a prime number or not
+- prime numbers are numbers that are only divisible by itself and 1
+- negative numbers, which are also not prime numbers
+~~~
+def is_prime(n):
+    """Tests if a number n is prime."""
+    if n <= 1: # Adding this condition
+        return False
+    divisor = 2
+    while divisor <= n // divisor: #检测一半的n就行 换算理解divisor**2 <= n
+        if n % divisor == 0:
+            return False
+        divisor += 1
+    return True
+~~~
+2. implementing the Fibonacci Series
+- Fibonacci sequence is a series of numbers where every number is the sum of the two numbers before it. The first two numbers are 0 and 1
+- instead of using recursion, your function must use loops
+~~~
+def fib(n):
+    first, second = 0, 1
+    if n < 1: return -1
+    if n == 1: return first 
+    if n == 2: return second
+    count = 3
+    while count <= n:
+        fib_n = first + second
+        first = second 
+        second = fib_n
+        count += 1
+    return fib_n
+~~~
+3. check whether the brackets are balanced
+- Given a string containing only square brackets, [], you must check whether the brackets are balanced or not. The brackets are said to be balanced if there is a closing bracket for every opening bracket 
+~~~
+def check_balance(brackets):
+    check = 0
+    for bracket in brackets:
+        if bracket == '[':
+            check += 1
+        elif bracket == ']':
+            check -= 1
+        if check < 0:
+            break
+    return check == 0
+~~~
