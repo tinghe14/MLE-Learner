@@ -11,8 +11,8 @@ https://khuyentran1401.github.io/Efficient_Python_tricks_and_tools_for_data_scie
 ## Python Features
 标题（描述下highlight）
 ## Object Orient Programming
-1. [educative module: Object-Oriented Programming in Python](https://www.educative.io/module/learn-oop-in-python)
-  - 
+1. educative module: Learn Object-Oriented Programming in Python
+      - note
 ## Vectorize: Numpy
 ## Basic Algorithms from scratch
 
