@@ -54,7 +54,7 @@ print(2 > 3 < 4 > 2) # Chaining Of operators (will check pairwise) -> False
 ~~~
 logical operators:
 - operator: and (True if both statements True), or (True if either one True), not
-- and and or operators are $`\textcolor{red}{\text{short-circuit operators语法糖}}`: the second operand is evaluated only if necessary
+- and and or operators are $`\textcolor{red}{\text{short-circuit operators语法糖}}`$: the second operand is evaluated only if necessary
 - other important points when dealing with logical operators:
     - in a numeric experession, True has the value 1 and False has the value 0
     - in a boolean expression, all numeric zero values are False, and all nonzeor values are True
