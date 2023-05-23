@@ -3,15 +3,44 @@ I listed several technical components which I think is important for MLE role. I
 
 > Motivated Quote: Under Bayes' theorem, no theory is perfect. Rather, it is a work in progress, always subject to further refinement and testing
 
-# Table of Contents (ongoing)
-
-
 markdown syntax shortcut:
 - highlighter:
 $`\textcolor{red}{\text{1}}`$ 
 $`\textcolor{blue}{\text{2}}`$ 
 $`\textcolor{green}{\text{3}}`$
 
+# Table of Contents (ongoing)
+1. coding language
+      - python feature
+      - object orient programming
+      - vectorize: numpy
+      - basic algorithm from scratch
+3. software design and unit test
+      - object orient design
+      - git
+      - unit test
+      - web development
+5. machine learning system design
+      - educative course
+      - youtuber 
+      - technical blog
+      - research paper
+7. data manipulation
+8. high preformance computing
+9. distributed computing or cloud computing
+      - cluster
+      - GCP
+      - docker
+11. machine learning
+      - basic algorithm from scrach
+13. natural lanuage processing
+      - basic algorithm from scrach
+15. big data
+16. AIML in production
+      - educative course
+      - deeplearning.ai course
+
+<!--
 # Coding Language (foundation)
 https://python-web-guide.readthedocs.io/zh/latest/base/basics.html
 https://khuyentran1401.github.io/Efficient_Python_tricks_and_tools_for_data_scientists/Chapter6/logging_debugging.html
@@ -68,4 +97,4 @@ my notes are in Notion
 # AIML in Production
 data science in productions: building scalable model pipelines
 cousera: MLOOP
-
+-->
