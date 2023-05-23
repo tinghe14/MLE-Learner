@@ -20,6 +20,7 @@ $`\textcolor{green}{\text{3}}`$
       - git
       - unit test
       - web development
+      - computer architecture
 5. machine learning system design
       - educative course
       - youtuber 
@@ -65,6 +66,8 @@ https://code.visualstudio.com/docs/python/testing
 ## Web Development
 software framework: https://www.freecodecamp.org/news/what-is-a-framework-software-frameworks-definition/
 建立一个网站hold自己的model
+## Computer Architecture
+- [computer memory architecture]()
 
 # Machine Learning System Design （high-priority）
 ## educative
