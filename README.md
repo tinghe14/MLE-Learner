@@ -9,7 +9,7 @@ $`\textcolor{red}{\text{1}}`$
 $`\textcolor{blue}{\text{2}}`$ 
 $`\textcolor{green}{\text{3}}`$
 - shortcut:
-<a id='tag'></a> (#tag)
+<a id='tag'></a> [something pointer](#tag)
 
 # Table of Contents (ongoing)
 1. coding language
@@ -17,12 +17,12 @@ $`\textcolor{green}{\text{3}}`$
       - object orient programming
       - vectorize: numpy
       - basic algorithm from scratch
-3. software design and unit test(#SDUT)
+3. [software design and unit test](#SDUT)
       - object orient design
       - git
       - unit test
       - web development
-      - computer architecture(#CA)
+      - [computer architecture](#CA)
 5. machine learning system design
       - educative course
       - youtuber 
