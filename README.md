@@ -8,6 +8,8 @@ markdown syntax shortcut:
 $`\textcolor{red}{\text{1}}`$ 
 $`\textcolor{blue}{\text{2}}`$ 
 $`\textcolor{green}{\text{3}}`$
+- shortcut:
+<a id='tag'></a> (#tag)
 
 # Table of Contents (ongoing)
 1. coding language
@@ -15,12 +17,12 @@ $`\textcolor{green}{\text{3}}`$
       - object orient programming
       - vectorize: numpy
       - basic algorithm from scratch
-3. software design and unit test
+3. software design and unit test(#SDUT)
       - object orient design
       - git
       - unit test
       - web development
-      - computer architecture
+      - computer architecture(#CA)
 5. machine learning system design
       - educative course
       - youtuber 
@@ -41,6 +43,12 @@ $`\textcolor{green}{\text{3}}`$
       - educative course
       - deeplearning.ai course
 
+# Software Design and Unit Test
+<a id='SDUT'></a>
+## Computer Architecture
+<a id='CA'></a>
+- [computer memory architecture](https://github.com/tinghe14/MLE-Learner/blob/7f686e86a8c86761d6068b0e69517632881cd9d7/Software%20Design%20and%20Unit%20Test/Computer%20Architecture/computer_memory_hierarchy.md)
+- 
 <!--
 # Coding Language (foundation)
 https://python-web-guide.readthedocs.io/zh/latest/base/basics.html
@@ -66,8 +74,7 @@ https://code.visualstudio.com/docs/python/testing
 ## Web Development
 software framework: https://www.freecodecamp.org/news/what-is-a-framework-software-frameworks-definition/
 建立一个网站hold自己的model
-## Computer Architecture
-- [computer memory architecture]()
+
 
 # Machine Learning System Design （high-priority）
 ## educative
