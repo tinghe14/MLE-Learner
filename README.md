@@ -13,7 +13,7 @@ $`\textcolor{green}{\text{3}}`$
 
 # Table of Contents (ongoing)
 1. [coding language](#CL)
-      - python feature
+      - [python feature](#PF)
       - object orient programming
       - vectorize: numpy
       - [basic algorithm from scratch](#BAFS1)
@@ -45,6 +45,8 @@ $`\textcolor{green}{\text{3}}`$
 
 # Coding Language
 <a id='CL'></a>
+# Python Feature
+<a id='PF'></a>
 ## Basic Algorithms from scratch
 <a id='BAFL1'></a>
 - [sorting]()
