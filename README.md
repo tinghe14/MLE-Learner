@@ -12,11 +12,11 @@ $`\textcolor{green}{\text{3}}`$
 <a id='tag'></a> [something pointer](#tag)
 
 # Table of Contents (ongoing)
-1. coding language
+1. [coding language](#CL)
       - python feature
       - object orient programming
       - vectorize: numpy
-      - basic algorithm from scratch
+      - [basic algorithm from scratch](#BAFS1)
 3. [software design and unit test](#SDUT)
       - object orient design
       - git
@@ -43,6 +43,11 @@ $`\textcolor{green}{\text{3}}`$
       - educative course
       - deeplearning.ai course
 
+# Coding Language
+<a id='CL'></a>
+## Basic Algorithms from scratch
+<a id='BAFL1'></a>
+- [sorting]()
 # Software Design and Unit Test
 <a id='SDUT'></a>
 ## Computer Architecture
