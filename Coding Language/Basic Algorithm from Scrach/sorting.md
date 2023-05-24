@@ -1,6 +1,8 @@
 Ref:
 - 考前背诵
 - [含动画和比较表格]（https://developer.aliyun.com/article/941774）
+- [含分类图]（https://blog.csdn.net/u011412768/article/details/107394325）
+- [含对应leetcode](https://zhuanlan.zhihu.com/p/77700835)
 
 Sorting Algorithm: bubble sort(冒泡排序), insertion sort(插入排序)，merge sort(归并排序)，quick sort(快速排序), topological sort(拓扑排序), heap sort(堆排序), bucket sort(桶排序)
 - Time Complexity:
