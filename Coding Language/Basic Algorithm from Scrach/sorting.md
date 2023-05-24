@@ -1,14 +1,19 @@
 Ref:
 - 考前背诵
-- [含动画和比较表格]（https://developer.aliyun.com/article/941774）
-- [含分类图]（https://blog.csdn.net/u011412768/article/details/107394325）
+- [含动画和比较表格](https://developer.aliyun.com/article/941774)
+- [含分类图](https://blog.csdn.net/u011412768/article/details/107394325)
 - [含对应leetcode](https://zhuanlan.zhihu.com/p/77700835)
+- [桶排序](https://segmentfault.com/a/1190000022767400)
+
+![sorting mindmap](https://github.com/tinghe14/MLE-Learner/blob/1213040e837c71afb0811353729c2e036fbdb3ba/Coding%20Language/Basic%20Algorithm%20from%20Scrach/sorting%20mindmap.png)
 
 Sorting Algorithm: bubble sort(冒泡排序), insertion sort(插入排序)，merge sort(归并排序)，quick sort(快速排序), topological sort(拓扑排序), heap sort(堆排序), bucket sort(桶排序)
 - Time Complexity:
   - O(n^2): bubble sort{space: O(1)}, insertion sort{O(1)}
   - O(nlogn): heap sort{O(1)}, merge sort{O(n)}, quick sort{O(logn)}
   - O(n): bucket sort{O(n+k)}
+
+![sorting table](https://github.com/tinghe14/MLE-Learner/blob/1213040e837c71afb0811353729c2e036fbdb3ba/Coding%20Language/Basic%20Algorithm%20from%20Scrach/sorting%20table.png)
 
 bubble sort(冒泡排序)
 - 比较相邻的元素，如果第一个比第二个大，就交换他们两个。
@@ -122,4 +127,113 @@ def merge_sort(arr):
   while right:
     result.append(right.pop(0))
   return result
+~~~
+
+quick sort(快速排序)
+- 快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要 Ο(nlogn) 次比较。在最坏状况下则需要 Ο(n²) 次比较，但这种状况并不常见。事实上，快速排序通常明显比其他 Ο(nlogn) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。
+- 快速排序使用分治法（Divide and conquer）策略来把一个串行（list）分为两个子串行（sub-lists）。
+- 快速排序又是一种分而治之思想在排序算法上的典型应用。本质上来看，快速排序应该算是在冒泡排序基础上的递归分治法。
+- 快速排序的名字起的是简单粗暴，因为一听到这个名字你就知道它存在的意义，就是快，而且效率高！它是处理大数据最快的排序算法之一了。虽然 Worst Case 的时间复杂度达到了 O(n²)，但是人家就是优秀，在大多数情况下都比平均时间复杂度为 O(n logn) 的排序算法表现要更好。查阅资料了解到：快速排序的最坏运行情况是 O(n²)，比如说顺序数列的快排。但它的平摊期望时间是 O(nlogn)，且 O(nlogn) 记号中隐含的常数因子很小，比复杂度稳定等于 O(nlogn) 的归并排序要小很多。所以，对绝大多数顺序性较弱的随机数列而言，快速排序总是优于归并排序。
+- 算法原理：
+  - 从数列中挑出一个元素，称为 “基准”（pivot）;
+  - 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
+  - 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序；递归的最底部情形，是数列的大小是0或1，也就是永远都已经被排序好了。虽然一直递归下去，但是这个算法总会退出，因为在每次的迭代（iteration）中，它至少会把一个元素摆到它最后的位置去。
+ ~~~
+ def quick_sort(arr, left=None, right=None):
+    left = 0 if not isinstance(left,(int, float)) else left
+    right = len(arr) - 1 if not isinstance(right,(int, float)) else right
+    if left < right:
+        partitionIndex = partition(arr, left, right)
+        quick_sort(arr, left, partitionIndex - 1)
+        quick_sort(arr, partitionIndex + 1, right)
+    return arr
+
+def partition(arr, left, right):
+    pivot = left
+    index = pivot + 1
+    i = index
+    while  i <= right:
+        if arr[i] < arr[pivot]:
+            swap(arr, i, index)
+            index += 1
+        i+=1
+    swap(arr, pivot, index - 1)
+    return index - 1
+
+def swap(arr, i, j):
+    arr[i], arr[j] = arr[j], arr[i]
+~~~
+
+heap sort(堆排序)
+- 堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。堆排序可以说是一种利用堆的概念来排序的选择排序。分为两种方法
+- 大顶堆：每个节点的值都大于或等于其子节点的值，在堆排序算法中用于升序排列；
+- 小顶堆：每个节点的值都小于或等于其子节点的值，在堆排序算法中用于降序排列；
+堆排序的平均时间复杂度为 Ο(nlogn)。
+- 算法原理：
+  - 将待排序序列构建成一个堆 H[0……n-1]，根据（升序降序需求）选择大顶堆或小顶堆；
+  - 把堆首（最大值）和堆尾互换；
+  - 把堆的尺寸缩小 1，并调用 shift_down(0)，目的是把新的数组顶端数据调整到相应位置；
+  - 重复步骤 2，直到堆的尺寸为1。
+~~~
+from math import floor
+
+def buildMaxHeap(arr):
+    for i in range(floor(len(arr)/2), -1, -1):
+        heapify(arr, i)
+
+def heapify(arr, i):
+    left = 2 * i + 1
+    right = 2 * i + 2
+    largest = i
+    if left < arrLen and arr[left] > arr[largest]:
+        largest = left
+    if right < arrLen and arr[right] > arr[largest]:
+        largest = right
+
+    if largest != i:
+        swap(arr, i, largest)
+        heapify(arr, largest)
+
+def swap(arr, i, j):
+    arr[i], arr[j] = arr[j], arr[i]
+
+def heap_sort(arr):
+    global arrLen
+    arrLen = len(arr)
+    buildMaxHeap(arr)
+    for i in range(len(arr)-1, 0, -1):
+        swap(arr, 0, i)
+        arrLen -= 1
+        heapify(arr, 0)
+    return arr
+~~~
+
+bucket sort(桶排序)
+- 也叫箱排序，其主要思想是：将待排序集合中处于同一个值域的元素存入同一个桶中，也就是根据元素值特性将集合拆分为多个区域，则拆分后形成的多个桶，从值域上看是处于有序状态的。对每个桶中元素进行排序，则所有桶中元素构成的集合是已排序的。桶排序是计数排序的扩展版本，计数排序可以看成每个桶只存储相同元素，而桶排序每个桶存储一定范围的元素。桶排序需要尽量保证元素分散均匀，否则当所有数据集中在同一个桶中时，桶排序失效。
+- 算法实现：
+  - 根据待排序集合中最大元素和最小元素的差值范围和映射规则，确定申请的桶个数；
+  - 遍历排序序列，将每个元素放到对应的桶里去；
+  - 对不是空的桶进行排序；
+  - 按顺序访问桶，将桶中的元素依次放回到原序列中对应的位置，完成排序。
+~~~
+# bucket_sort 代码实现
+
+from typing import List
+
+def bucket_sort(arr:List[int]):
+    """桶排序"""
+    min_num = min(arr)
+    max_num = max(arr)
+    # 桶的大小
+    bucket_range = (max_num-min_num) / len(arr)
+    # 桶数组
+    count_list = [ [] for i in range(len(arr) + 1)]
+    # 向桶数组填数
+    for i in arr:
+        count_list[int((i-min_num)//bucket_range)].append(i)
+    arr.clear()
+    # 回填，这里桶内部排序直接调用了sorted
+    for i in count_list:
+        for j in sorted(i):
+            arr.append(j)
 ~~~
