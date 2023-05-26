@@ -6,8 +6,8 @@ Course Content
 - [TensorBoard使用](#TB)
 - [Transforms使用](#TF)
 - [DataLoader使用](#DL)
-- nn.Module基本骨架
-- 卷积层
+- [nn.Module基本骨架](#nnM)
+- [卷积层](#卷积)
 - 最大池化
 - 非线形激活
 - 线性层及其他层
@@ -158,13 +158,44 @@ print(img.shape) #torch.Size([3, 32, 32])
 print(target) #3
 
 writer = SummaryWriter('dataloader')
-step = 0
-for data in test_loader:
-    imgs, targets = data
-    print(imgs.shape) #torch.Size([4, 3, 32, 32]) 4张图片
-    print(targets) #tensor([0,0,1,0])
-    writer.add_images('test_data', imgs, step)
-    step += 1
+for epoch in range(2): #遍历两轮，且因shuffle=True, 意味着第一次和第二次是顺序不一样的图片
+  step = 0
+  for data in test_loader:
+      imgs, targets = data
+      print(imgs.shape) #torch.Size([4, 3, 32, 32]) 4张图片
+      print(targets) #tensor([0,0,1,0])
+      writer.add_images('Epoch: {}'.format(epoch), imgs, step)
+      step += 1
     
 writer.close()    
 ~~~
+
+## nn.Module基本骨架
+<a id='nnM'></a>
+torch.nn vs torch.nnfunctional:
+- torch.nn是torch.nnfunctional的一个封装，更好使用
+one of basic building blocks : Containers
+  - 六个模块：
+  - Module: base class for all neural network modules
+~~~
+import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module): #继承nn.Module
+    def __init__(self): #初始化
+        super().__init__() #一定要的，对父类也进行一个初始化
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+        
+model = Model()
+x = torch.tensor(1.0)
+output = model(x)
+~~~
+
+## 卷积层
+<a id='卷积'></a>
+- outchannel: 输出通道数就是卷积核的个数
