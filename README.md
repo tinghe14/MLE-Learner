@@ -1,7 +1,7 @@
 # MLE-Learner
 I listed several technical components which I think is important for MLE role. I tackle them one by one and organize my notes in this repository.
 
-> Motivated Quote: Under Bayes' theorem, no theory is perfect. Rather, it is a work in progress, always subject to further refinement and testing
+> No theory is perfect. Rather, it is a work in progress, always subject to further refinement and testing
 
 markdown syntax shortcut:
 - highlighter:
