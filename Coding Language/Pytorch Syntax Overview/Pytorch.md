@@ -26,7 +26,7 @@ Course Content
 - package的法宝： dir(): 打开，看见里面有什么； help():这个函数的工具书
 - os package: 做两个路径的连接
 - self: 一个函数的变量不能传递给另外一个函数，self可以把这个指定的函数给后面的使用
-- pycharm里查看函数具体信息的方式： help(函数名) 或者 鼠标移到这个函数的位置+常按control+点击蓝色链接进入官方doc
+- pycharm里查看函数具体信息的方式： help(函数名) 或者 常按control+鼠标移到这个函数的位置+点击蓝色链接进入官方doc
 ~~~
 import os 
 root_dir = 'dataset/train'
@@ -91,4 +91,30 @@ writer.close()
 
 ## Transforms使用
 <a id='TF'></a>
+- transformers主要是对图片进行处理
+- transformer结构和用法(点开structure可以看到他的class)
+  - 常见的class
+    - Compose
+    - ToTensor
+    - ToPILImage
+~~~
+from PIL import Image
+from torchvision import transforms
+from torch.utils.tensorboard import SummaryWriter
 
+writer = SummaryWritter('logs')
+img_path = 'a/b/c.jpg'
+img = Image.open(img_path)
+
+# tensor数据类型
+# 通过transforms.ToTensor去看两个问题
+# 1. transforms如何使用
+tensor_trans = transforms.ToTensor() #先实例化
+tensor_img = tensor_trans(img)
+
+writer.add_image('ToTensor', img_tensor)
+write.close()
+# 2. 为什么需要tensor数据类型
+有各种反向传播需要的属性
+~~~
+  
