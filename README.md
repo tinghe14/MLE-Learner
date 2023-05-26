@@ -53,7 +53,7 @@ $`\textcolor{green}{\text{3}}`$
 - [sorting]()
 ## pytorch syntax overview
 <a id='PSO'></a>
-- [Pytorch]()
+- [note for Pytorch in Chinese]()
 
 # Software Design and Unit Test
 <a id='SDUT'></a>
