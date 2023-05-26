@@ -5,7 +5,7 @@ Course Content
 - [Dataset类](#dataset)
 - [TensorBoard使用](#TB)
 - [Transforms使用](#TF)
-- DataLoaderh使用
+- [DataLoader使用](#DL)
 - nn.Module基本骨架
 - 卷积层
 - 最大池化
@@ -97,6 +97,10 @@ writer.close()
     - Compose
     - ToTensor
     - ToPILImage
+    - Normalize
+    - Resize
+    - Compose
+  - 注意输入输出类型，多看官方文档
 ~~~
 from PIL import Image
 from torchvision import transforms
@@ -117,4 +121,30 @@ write.close()
 # 2. 为什么需要tensor数据类型
 有各种反向传播需要的属性
 ~~~
-  
+- 合起来
+~~~
+import torchvision
+from torchvision import transforms
+from torch.utils.tensorboard import SummaryWriter
+
+dataset_transform = torchvision.transforms.Compose([
+    torchvision.transforms.ToTensor()
+])
+
+train_set = torchvision.datasets.CIFAR10(root='./dataset', train=True, transform=dataset_transform, download=True)
+test_set = torchvision.datasets.CIFAR10(root='./dataset', train=False, transform=dataset_transform, download=True)
+
+writer = SummaryWriter('p10')
+for i in range(10):
+    img, target = test_set[i]
+    writer.add_image('test_set', img, i)
+~~~
+
+## DataLoader使用
+<a id='DL'></a>
+- dataset: 查看数据
+- dataloader: 加载器，从dataset怎么取，每次取多少(batch_size)就是由dataloader决定
+  - num_workers: 多进程
+~~~
+
+~~~
