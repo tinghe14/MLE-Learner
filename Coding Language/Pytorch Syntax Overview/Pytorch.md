@@ -23,10 +23,10 @@ Course Content
 
 ## Intro-others
 <a id='IO'></a>
-- package的法宝： dir(): 打开，看见里面有什么； help():这个函数的工具书
+- package的法宝： dir(库名): 查询库下的所有模块； help(函数名):这个函数的工具书
 - os package: 做两个路径的连接
 - self: 一个函数的变量不能传递给另外一个函数，self可以把这个指定的函数给后面的使用
-- pycharm里查看函数具体信息的方式： help(函数名) 或者 常按control+鼠标移到这个函数的位置+点击蓝色链接进入官方doc
+- pycharm里查看函数具体信息的方式： help(函数名) 或者 常按control+鼠标移到这个函数的位置+点击蓝色链接进入__iniy__.py文件查看到该函数的定义
 ~~~
 import os 
 root_dir = 'dataset/train'
