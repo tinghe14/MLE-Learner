@@ -146,5 +146,25 @@ for i in range(10):
 - dataloader: 加载器，从dataset怎么取，每次取多少(batch_size)就是由dataloader决定
   - num_workers: 多进程
 ~~~
+import torchvision
+from torch.utils.data import DataLoader
 
+test_data = torchvision.datasets.CIFAR10(root='./dataset', train=False, transform=torchvision.transforms.ToTensor(), download=True)
+
+test_loader = DataLoader(dataset=test_data, batch_size=4, shuffle=True, num_workers=0, drop_last=False)
+# 测试数据集第一张图片
+img, target = test_data[0]
+print(img.shape) #torch.Size([3, 32, 32])
+print(target) #3
+
+writer = SummaryWriter('dataloader')
+step = 0
+for data in test_loader:
+    imgs, targets = data
+    print(imgs.shape) #torch.Size([4, 3, 32, 32]) 4张图片
+    print(targets) #tensor([0,0,1,0])
+    writer.add_images('test_data', imgs, step)
+    step += 1
+    
+writer.close()    
 ~~~
