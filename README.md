@@ -17,6 +17,7 @@ $`\textcolor{green}{\text{3}}`$
       - object orient programming
       - vectorize: numpy
       - [basic algorithm from scratch](#BAFS1)
+      - [pytorch syntax overview](#PSO)
 3. [software design and unit test](#SDUT)
       - object orient design
       - git
@@ -45,11 +46,15 @@ $`\textcolor{green}{\text{3}}`$
 
 # Coding Language
 <a id='CL'></a>
-# Python Feature
+## Python Feature
 <a id='PF'></a>
 ## Basic Algorithms from scratch
 <a id='BAFL1'></a>
 - [sorting]()
+## pytorch syntax overview
+<a id='PSO'></a>
+- [Pytorch]()
+
 # Software Design and Unit Test
 <a id='SDUT'></a>
 ## Computer Architecture
