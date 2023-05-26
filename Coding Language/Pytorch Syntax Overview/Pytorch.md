@@ -5,7 +5,7 @@ Course Content
 - [Dataset类](#dataset)
 - [TensorBoard使用](#TB)
 - [Transforms使用](#TF)
-- DataLoader水涌
+- DataLoaderh使用
 - nn.Module基本骨架
 - 卷积层
 - 最大池化
