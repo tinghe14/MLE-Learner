@@ -9,10 +9,10 @@ Course Content
 - [nn.Module基本骨架](#nnM)
 - [卷积层](#卷积)
 - [池化层](#池化)
-- 非线形激活
-- 线性层及其他层
-- sequential
-- 损失函数和反向传播
+- [非线形激活](#非线性)
+- [线性层及其他层](#线性)
+- [sequential](#seq)
+- [损失函数和反向传播](#损失)
 - 优化器
 - 现有模型的使用
 - 网络模型的保存与读取
@@ -204,4 +204,29 @@ output = model(x)
 ## 池化层
 <a id='池化'></a>
 - MaxPool: 最大池化，下采样； MaxUnpool: 相反的，下采样
+  - 保持主要特征，减少参数量
+  - keneral size: 池化核，等于int时，生成一个正方形
+  - dilation: 形成空洞卷积
+  - stride: 步长，默认为kernal size
+  - ceil modeL：没有满的时候，要不要做操作，默认是false
 
+## 非线形激活
+<a id='非线性'></a>
+- 给网络引入非线性特征，因为非线性越多才可以画出更多的特征
+- 常见：nn.ReLU, nn.Sigmoid
+
+## 线性层及其他层
+<a id='线性'></a>
+- normalized layer: 归一化可以加快神经网络训练速度
+  - nn.BatchNorm26
+- recurrent layer
+- transformer layer
+- linear layer
+- dropout layer
+- embedding layer
+
+## sequential
+<a id='seq'></a>
+- a sequential container
+
+## 损失函数和反向传播
