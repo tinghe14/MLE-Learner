@@ -19,7 +19,7 @@ Course Content
 - [完整模型训练套路](#完整)
 - [利用GPU的训练](#GPU)
 - [完整模型验证套路](#测试)
-- 完结-看开源项目
+- [完结-看开源项目](#完结)
 
 ## Intro-others
 <a id='IO'></a>
@@ -458,3 +458,7 @@ print(output)
 
 print(output.argmax(1))
 '''
+
+## 完结-看开源项目
+<a id='完结'></a>
+
