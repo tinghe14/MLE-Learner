@@ -15,7 +15,7 @@ Course Content
 - [损失函数和反向传播](#损失)
 - [优化器](#优化)
 - [现有模型的使用](#现有)
-- 网络模型的保存与读取
+- [网络模型的保存与读取](#保存)
 - 完整模型训练套路
 - 利用GPU的训练
 - 完整模型验证套路
@@ -258,3 +258,15 @@ for epoch in range(20):
 
 ## 现有模型的使用
 <a id='现有'></a>
+- pretrained=False的预训练大模型，weight也不会为零，他们用的是一些固定的初始值比如xiaver initialization
+'''
+# 添加一层
+vgg16_true = torchvision.models.vgg16(pretrained=True)
+vfgg16_true.add_module('add_linear', nn.linear(1000, 10))
+# 直接修改最后一层
+vgg16_false.classifier[6] = nn.Linear(4096, 10)
+'''
+
+## 网络模型的保存与读取
+<a id='保存'></a>
+
