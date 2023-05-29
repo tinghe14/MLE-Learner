@@ -13,8 +13,8 @@ Course Content
 - [线性层及其他层](#线性)
 - [sequential](#seq)
 - [损失函数和反向传播](#损失)
-- 优化器
-- 现有模型的使用
+- [优化器](#优化)
+- [现有模型的使用](#现有)
 - 网络模型的保存与读取
 - 完整模型训练套路
 - 利用GPU的训练
@@ -27,6 +27,7 @@ Course Content
 - os package: 做两个路径的连接
 - self: 一个函数的变量不能传递给另外一个函数，self可以把这个指定的函数给后面的使用
 - pycharm里查看函数具体信息的方式： help(函数名) 或者 常按control+鼠标移到这个函数的位置+点击蓝色链接进入__iniy__.py文件查看到该函数的定义
+- 断点debug,执行到断点前
 ~~~
 import os 
 root_dir = 'dataset/train'
@@ -230,3 +231,30 @@ output = model(x)
 - a sequential container
 
 ## 损失函数和反向传播
+<a id='损失'></a>
+- loss function: 计算实际输出和目标之间的差距；为我们更新输出提供一定的依据（反向传播）
+  - nn.CrossEntropyLoss: 包含logsoftmax和NLLLoss，predict x是对每一类的得分，y是预测成哪一类
+  - 计算反向传播是loss = nn.CrossEntropyLoss(x, y); loss.backward()
+
+## 优化器
+<a id='优化'></a>
+'''
+loss = nn.CrossEntropyLoss()
+model = Model()
+optim = torch.optim.SGD(model.parameters(), lr=0.01)
+for epoch in range(20):
+    running_loss = 0.0
+    for data in dataloader:
+        imgs, targets = data
+        outputs = model(imgs)
+        result_loss = loss(outputs, targets)
+        optimizer.zero_grad() #把上一轮计算出来的grad清零
+        # 不清零的话，梯度每次计算都会累积，会越来越大
+        result_loss.backward()
+        optimizer.step()
+        running_loss = running_loss + result_loss
+    print(running_loss)
+'''
+
+## 现有模型的使用
+<a id='现有'></a>
