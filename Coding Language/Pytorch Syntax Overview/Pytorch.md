@@ -238,7 +238,7 @@ output = model(x)
 
 ## 优化器
 <a id='优化'></a>
-'''
+~~~
 loss = nn.CrossEntropyLoss()
 model = Model()
 optim = torch.optim.SGD(model.parameters(), lr=0.01)
@@ -254,22 +254,22 @@ for epoch in range(20):
         optimizer.step()
         running_loss = running_loss + result_loss
     print(running_loss)
-'''
+~~~
 
 ## 现有模型的使用
 <a id='现有'></a>
 - pretrained=False的预训练大模型，weight也不会为零，他们用的是一些固定的初始值比如xiaver initialization
-'''
+~~~
 # 添加一层
 vgg16_true = torchvision.models.vgg16(pretrained=True)
 vfgg16_true.add_module('add_linear', nn.linear(1000, 10))
 # 直接修改最后一层
 vgg16_false.classifier[6] = nn.Linear(4096, 10)
-'''
+~~~
 
 ## 网络模型的保存与读取
 <a id='保存'></a>
-'''
+~~~
 vgg16 = torchvision.models.vgg16(pretrained=False)
 # 保存方式1
 # 保存了网络模型的结构也保存了网络模型的参数
@@ -283,11 +283,11 @@ torch.save(vgg16.state_dict(), 'vgg16_method2.pth')
 # 加载模型2
 vgg16 = torchvision.models.vgg16(pretrained=False)
 vgg16.load_state_dict(torch.load('vgg16_model2.pth'))
-'''
+~~~
 
 ## 完整模型训练套路
 <a id='完整'></a>
-'''
+~~~
 import torchvision
 from torch.utils.tensorboard import SummaryWriter
 
@@ -396,7 +396,7 @@ for i in range(epoch):
     print("模型已保存")
 
 writer.close()
-'''
+~~~
 
 ## 利用GPU的训练
 <a id='GPU'></a>
@@ -413,7 +413,7 @@ writer.close()
 ## 完整模型验证套路
 <a id='测试'></a>
 - 利用已经训练好的模型，然后给他提供输入
-'''
+~~~
 import torch
 import torchvision
 from PIL import Image
@@ -457,7 +457,7 @@ with torch.no_grad():
 print(output)
 
 print(output.argmax(1))
-'''
+~~~
 
 ## 完结-看开源项目
 <a id='完结'></a>
