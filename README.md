@@ -53,7 +53,7 @@ $`\textcolor{green}{\text{3}}`$
 - [sorting]()
 ## pytorch syntax overview
 <a id='PSO'></a>
-- [note for Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/6a8ca7e2b4b4c268bde051662873b1bf27851f78/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md)
+- [note for Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/77a8595d0c3815723580c47f2af0289aaabc65fc/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md)
 
 # Software Design and Unit Test
 <a id='SDUT'></a>
