@@ -33,7 +33,7 @@ $`\textcolor{green}{\text{3}}`$
 8. high preformance computing
 9. distributed computing or cloud computing
       - cluster
-      - GCP
+      - [GCP](#GCP)
       - docker
 11. machine learning
       - basic algorithm from scrach
@@ -60,7 +60,13 @@ $`\textcolor{green}{\text{3}}`$
 ## Computer Architecture
 <a id='CA'></a>
 - [computer memory architecture](https://github.com/tinghe14/MLE-Learner/blob/7f686e86a8c86761d6068b0e69517632881cd9d7/Software%20Design%20and%20Unit%20Test/Computer%20Architecture/computer_memory_hierarchy.md)
-- 
+
+
+# Distributed Computing or Cloud Computing
+## GCP
+<a id='GCP'></a>
+- [note for cracking the Google associate cloud engineer certification in educative]()
+
 <!--
 # Coding Language (foundation)
 https://python-web-guide.readthedocs.io/zh/latest/base/basics.html
