@@ -28,6 +28,7 @@ Course Content
 - self: 一个函数的变量不能传递给另外一个函数，self可以把这个指定的函数给后面的使用
 - pycharm里查看函数具体信息的方式： help(函数名) 或者 常按control+鼠标移到这个函数的位置+点击蓝色链接进入__iniy__.py文件查看到该函数的定义
 - 断点debug,执行到断点前
+- torch.cuda.get_device_name(0)
 ~~~
 import os 
 root_dir = 'dataset/train'
