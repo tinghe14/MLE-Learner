@@ -49,4 +49,7 @@ cloud computing is an environment that relies on various types of virtualization
 
 # Compute Service Offerings
 
-
+# Google Cloud Official Doc for Python
+gcloud CLI:
+- 是一组适用于 Google Cloud 的命令行工具。其中包含 gcloud、gsutil 和 bq，您可以使用它们通过命令行访问 Compute Engine、Cloud Storage、BigQuery 和其他产品和服务。这些工具既能以交互方式使用，也可以在自动化脚本中运行。
+[Python使用入门指南]（https://cloud.google.com/python/docs/getting-started?hl=zh-cn）
