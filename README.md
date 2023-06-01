@@ -31,7 +31,7 @@ $`\textcolor{green}{\text{3}}`$
       - research paper
 7. data manipulation
 8. high preformance computing
-9. distributed computing or cloud computing
+9. [distributed computing or cloud computing](#DCCC)
       - cluster
       - [GCP](#GCP)
       - docker
@@ -63,6 +63,7 @@ $`\textcolor{green}{\text{3}}`$
 
 
 # Distributed Computing or Cloud Computing
+<a id='DCCC'></a>
 ## GCP
 <a id='GCP'></a>
 - [note for cracking the Google associate cloud engineer certification in educative]()
