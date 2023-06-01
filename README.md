@@ -66,7 +66,7 @@ $`\textcolor{green}{\text{3}}`$
 <a id='DCCC'></a>
 ## GCP
 <a id='GCP'></a>
-- [note for cracking the Google associate cloud engineer certification in educative]()
+- [note in Chinese(https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/SUMMARY.md)
 
 <!--
 # Coding Language (foundation)
