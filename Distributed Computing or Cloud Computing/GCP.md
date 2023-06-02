@@ -227,3 +227,23 @@ text_classification
 
 ### 构建大数据云机器学习引擎
 <a id='大数据'></a>
+Cloud Machine Learning Engine 也称为 Cloud AI Platform。 因此，让我们从了解云中的 ML 开始。
+本章将涵盖以下主题：
+- 了解机器学习
+- 了解如何使用云机器学习引擎
+- Keras 框架概述
+- 使用 Keras 框架训练模型
+- 使用 Google AI 平台训练模型
+- 使用 Cloud Machine Learning Engine 的异步批量预测
+- 使用 Cloud Machine Learning Engine 进行实时预测
+
+了解机器学习
+-  在当今的大数据时代，云消除了对完全拥有物理硬件和软件的需求。 许多公司可以轻松地对数据进行智能分析，因为这些复杂的系统可以在云中租用。 只要他们可以访问 ML 的云，任何人都可以最大程度地使用该技术。
+-  有现成的开源学习框架，例如 TensorFlow，MXNet 和 CNTK，这些框架允许企业在其硬件上进行操作并帮助他们构建 ML 模型。 但是，内部开发的高级 ML 模型会遇到准确率问题。 这是因为对实际大数据模型的训练通常涉及具有巨大计算和存储容量的大型集群。 在将 ML 技能引入业务应用中的许多方面，进入的障碍很大。 构造，训练和实现 ML 模型以及计算和硬件规范所需的专业知识，将导致更大的人工，生产和基础架构支出。 这些问题可以通过云计算解决，因为主要的公共云平台旨在使企业能够利用 ML 技能来解决业务问题，而不会带来任何技术负担。
+
+了解如何使用云机器学习引擎
+- Cloud Machine Learning Engine 是一项由 Google Cloud 管理的服务，可让开发人员和信息研究人员为 ML 构建，操作和产生更好的模型。 Cloud ML Engine（或 AI 平台）提供可以单独使用或一起使用的训练和预测服务。 训练和预测服务现在称为 ML Engine 中的 AI 平台训练和 AI 平台预测。
+- 您可以使用 Google AI Platform Notebooks，Google Cloud Machine Learning 模型训练以及 Google Cloud AI Platform Prediction 服务来构建项目。 在本章中，我们将介绍如何利用 Google AI Platform Notebooks。 我们在“第 8 章”，“使用 Cloud ML Engine 实现 TensorFlow 模型”和“第 9 章”，“构建预测应用”中介绍Google Cloud Machine Learning 模型的训练和预测服务。
+
+Google Cloud AI Platform 笔记本
+- AI 平台笔记本是一项托管服务，可提供嵌入式 JupyterLab 环境
