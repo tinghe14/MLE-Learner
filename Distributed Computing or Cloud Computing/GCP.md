@@ -247,3 +247,23 @@ Cloud Machine Learning Engine 也称为 Cloud AI Platform。 因此，让我们�
 
 Google Cloud AI Platform 笔记本
 - AI 平台笔记本是一项托管服务，可提供嵌入式 JupyterLab 环境
+
+Google AI Platform 深度学习映像
+-  Google Cloud AI Platform 提供了深度学习虚拟机，这些虚拟机提供经过验证，优化和测试的操作系统映像，从而省去了为深度学习算法构建和配置计算实例的麻烦。 AI 深度学习 VM 映像平台是一系列 VM 映像，这些映像已通过基于 Debian9 的 Compute Engine 针对数据科学和 ML 进行了优化。 所有映像都预装了主要的 ML 框架和仪器，并且可以在 GPU 盒的盒子外面使用，以加快信息处理的速度。 Google Cloud AI Platform 的深度学习 VM 映像是预打包的虚拟机图片的集合，这些图片提供了深刻的，随时可运行的 ML 平台结构。
+
+创建 Google Platform AI 笔记本
+![笔记本1](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%201.png)
+![笔记本2](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%202.png)
+![笔记本3](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%203.png)
+![笔记本4](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%204.png)
+![笔记本5](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%205.png)
+![笔记本6](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%206.png)
+![笔记本7](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%207.png)
+![笔记本8](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%208.png)
+![笔记本9](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%209.png)
+![笔记本10](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%2010.png)
+![笔记本11](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%2011.png)
+![笔记本12](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%2012.png)
+![笔记本13](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%2013.png)
+![笔记本14](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%2014.png)
+
