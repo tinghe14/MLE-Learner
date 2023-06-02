@@ -70,4 +70,21 @@ Compute Engine 和 AI 应用
 
 App Engine 和 AI 应用
 -  App Engine 上运行任何移动或 Web 应用时，在许多用例中，这些应用都需要 AI。 在 App Engine 中部署应用时可以实现这些目标。 该服务可以与云终结点一起部署，$`\textcolor{red}{\text{而 Python 应用可以在 App Engine 中部署，从而加载训练有素的机器学习模型}}`$ 。 通过 App Engine 访问模型后，该服务可以将请求发送到 Python 应用并以一致的方式获取响应。
+
+Cloud Functions 和 AI 应用
+- 在运行任何应用时，如果用户希望基于特定事件调用 Cloud ML 或 Cloud Vision 的 API，则可以使用 Cloud Functions。
+
+Kubernetes Engine
+- Kubernetes Engine 是 Google Cloud 提供的一项托管服务； 它用于部署和运行容器化的应用。 以下是 Kubernetes Engine 的功能：
+  - 在 Kubernetes 集群下，Google 实际上正在运行 Compute Engine，因此我们在 Compute Engine 上拥有的大多数优势将与 Kubernetes Engine 一起使用，并提供其提供的其他服务。
+  - 在 Kubernetes 集群中，可以使用具有自定义 OS 映像的虚拟机，并且集群将自动缩放自定义映像。
+  - Kubernetes 集群具有高度的安全性，并获得了 HIPAA 和 PCI DSS 3.1 的支持。
+  - 它支持常见的 Docker 映像和私有容器注册表，用户可以通过该注册表访问私有 Docker 映像。
+  - Kubernetes 集群可以与 Stackdriver 集成在一起，以实现对集群的监视和日志记录。
+
+Kubernetes Engine 和 AI 应用
+- 在为 Al（ML）应用训练模型时，始终需要功能强大的机器，以通过提供充足的训练数据并减少训练模型的时间来提高模型的效率。 $`\textcolor{red}{\text{可以使用GPU构建Kubernetes集群，以训练模型并运行ML工作负载}}`$。 这可以使许多机器学习应用受益，这些应用需要具有强大 GPU 机器的托管容器化集群。
   
+进入存储选项
+- GCP 提供了各种存储选项来存储您的应用数据。 不同的应用具有不同的存储需求，并且取决于应用，性能得以提高。
+- 为您的应用选择正确的存储选项很重要。 根据 Google 中可用的存储选项，以下图表将帮助您确定正确的存储选项：
