@@ -88,3 +88,40 @@ Kubernetes Engine 和 AI 应用
 进入存储选项
 - GCP 提供了各种存储选项来存储您的应用数据。 不同的应用具有不同的存储需求，并且取决于应用，性能得以提高。
 - 为您的应用选择正确的存储选项很重要。 根据 Google 中可用的存储选项，以下图表将帮助您确定正确的存储选项：
+![存储选项](https://github.com/tinghe14/MLE-Learner/blob/a8a5e5599aaa3e7115803642f4d28b5b4c129f64/Distributed%20Computing%20or%20Cloud%20Computing/GCP%E5%AD%98%E5%82%A8%E9%80%89%E9%A1%B9.png)
+
+cloud storage
+- 云存储是 GCP 提供的对象存储。 以下是云存储的功能：
+  - 它可以存储任何数量的数据和各种格式的数据，包括结构化数据，非结构化数据，视频文件，图像，二进制数据等。
+  - 用户可以根据以下要求将数据存储在 Cloud Storage 中的四个不同的存储桶中，即多区域存储，区域存储，近线存储和冷线存储。如果数据在世界范围内经常访问，则转到“多区域”存储桶; 如果经常在同一地理区域访问数据，则进入“区域”存储桶。 对于每月访问一次的数据，请使用 Nearline，对于每年访问一次的数据，请使用 Coldline 存储桶; 选择桶很重要，因为与之相关的成本
+  - Cloud Storage 提供了 API 和工具，用于进出数据传输。
+  - 用户可以使用gsutil工具从本地传输数据，也可以使用云服务从其他云传输数据。
+  - BigQuery 和 Dataproc 等服务可以访问 Cloud Storage 中存储的数据，以创建表并将其用于处理中
+  - 凭借其所有功能，云存储是 GCP 上最常用的存储选项，也是最便宜的存储选项之一。 根据存储类别和访问模式，其价格从每月每 GB 0.007 美元到每月每 GB 0.036 美元不等
+
+Cloud Storage 和 AI 应用
+- 云存储可以在各种 AI 和 ML 用例中提供帮助。 大多数大数据迁移或现代数据平台都使用 Cloud Bigtable 构建其 NoSQL 数据库。 例如，Spark ML 应用将访问 Cloud Bigtable 中的数据并将结果存储在其中。 云存储已经用于基因组学，视频转码，数据分析和计算等用例。
+- Cloud Bigtable 是 GCP 提供的完全托管的 NoSQL 数据库系统。 它可以以极低的延迟和高吞吐量扩展到 PB 级的数据
+
+BigQuery 和 AI 应用
+- BigQuery ML 是 BigQuery 机器学习的一种形式，它具有一些内置算法，可以直接在 SQL 查询中用于训练模型和预测输出。 BigQuery ML 当前支持分类模型的线性回归，二进制逻辑回归和多类逻辑回归
+
+Cloud Dataproc
+- Cloud Dataproc 是一个完全托管的 Hadoop 和 Spark 集群，可以在几秒钟内旋转。 Cloud Dataproc 是一个自动扩展集群，可用于非常有效地运行 Hadoop，Spark 以及 AI 和 ML 应用。 在高峰时段，可以根据使用情况将节点添加到群集，并且在需求较低时可以进行缩减。
+- Dataproc 与其他服务集成，例如云存储，BigQuery，Stackdriver，身份和访问管理以及网络。 这使得群集的使用非常容易且安全
+
+其他的存储方式暂时我不会设计，有需要继续阅读[这个章节](https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/02.md)
+
+建立 ML 管道
+- 让我们来看一个详细的示例，在该示例中，我们将建立一条端到端的管道，从将数据加载到 Cloud Storage，在其上创建 BigQuery 数据集，使用 BigQuery ML 训练模型并对其进行测试。 在此用例中，我们将使用逻辑回归模型来查找潜在客户转化概率。 您可以使用选择的任何合适的数据集并遵循此示例。
+- 数据先加载到 Cloud Storage 和 BigQuery 中以及对模型进行训练并使用潜在客户数据进行测试的端到端过程
+![将数据加载到cloud storage](https://github.com/tinghe14/MLE-Learner/blob/676b90e230f2ab09828334cb2b426f6b5eb70e63/Distributed%20Computing%20or%20Cloud%20Computing/%E5%B0%86%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E5%88%B0%20Cloud%20Storage.png)
+![将数据加载到big query 1](https://github.com/tinghe14/MLE-Learner/blob/676b90e230f2ab09828334cb2b426f6b5eb70e63/Distributed%20Computing%20or%20Cloud%20Computing/%E5%B0%86%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E5%88%B0%20BigQuery%201.png)
+![将数据加载到big query 2](https://github.com/tinghe14/MLE-Learner/blob/676b90e230f2ab09828334cb2b426f6b5eb70e63/Distributed%20Computing%20or%20Cloud%20Computing/%E5%B0%86%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E5%88%B0%20BigQuery%202.png)
+![将数据加载到big query 3](https://github.com/tinghe14/MLE-Learner/blob/676b90e230f2ab09828334cb2b426f6b5eb70e63/Distributed%20Computing%20or%20Cloud%20Computing/%E5%B0%86%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E5%88%B0%20BigQuery%203.png)
+![训练模型 1](https://github.com/tinghe14/MLE-Learner/blob/676b90e230f2ab09828334cb2b426f6b5eb70e63/Distributed%20Computing%20or%20Cloud%20Computing/%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%201.png)
+![训练模型 2](https://github.com/tinghe14/MLE-Learner/blob/676b90e230f2ab09828334cb2b426f6b5eb70e63/Distributed%20Computing%20or%20Cloud%20Computing/%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%202.png)
+![评估模型](https://github.com/tinghe14/MLE-Learner/blob/676b90e230f2ab09828334cb2b426f6b5eb70e63/Distributed%20Computing%20or%20Cloud%20Computing/%E8%AF%84%E4%BC%B0%E6%A8%A1%E5%9E%8B.png)
+![测试模型](https://github.com/tinghe14/MLE-Learner/blob/676b90e230f2ab09828334cb2b426f6b5eb70e63/Distributed%20Computing%20or%20Cloud%20Computing/%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9E%8B.png)
+
+
