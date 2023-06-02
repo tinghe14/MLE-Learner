@@ -267,3 +267,9 @@ Google AI Platform 深度学习映像
 ![笔记本13](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%2013.png)
 ![笔记本14](https://github.com/tinghe14/MLE-Learner/blob/45bc0297df16c2e7529111711c9912be70a2e46d/Distributed%20Computing%20or%20Cloud%20Computing/%E5%88%9B%E5%BB%BA%20Google%20Platform%20AI%20%E7%AC%94%E8%AE%B0%E6%9C%AC%2014.png)
 
+使用Keras框架训练模型
+![使用Keras框架训练模型1](https://github.com/tinghe14/MLE-Learner/blob/f790a902bf00169afa9de42f146deae32115b29a/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8%20Keras%20%E6%A1%86%E6%9E%B6%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%201.png)
+![使用Keras框架训练模型2](https://github.com/tinghe14/MLE-Learner/blob/f790a902bf00169afa9de42f146deae32115b29a/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8%20Keras%20%E6%A1%86%E6%9E%B6%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%202.png)
+![使用Keras框架训练模型3](https://github.com/tinghe14/MLE-Learner/blob/f790a902bf00169afa9de42f146deae32115b29a/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8%20Keras%20%E6%A1%86%E6%9E%B6%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%203.png)
+
+使用google ai平台训练模型
