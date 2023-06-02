@@ -39,8 +39,11 @@ $`\textcolor{green}{\text{3}}`$
       - basic algorithm from scrach
 13. natural lanuage processing
       - basic algorithm from scrach
-15. big data
-16. AIML in production
+14. [deep learning](#DL)
+      - basic algorithm from scratch
+      - [deeplearning.ai course](#DLAIC)
+16. big data
+17. AIML in production
       - educative course
       - deeplearning.ai course
 
@@ -67,6 +70,11 @@ $`\textcolor{green}{\text{3}}`$
 ## GCP
 <a id='GCP'></a>
 - [note in Chinese(https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/SUMMARY.md)
+
+# Deep Learning
+<a id='DL'></a>
+- deep learning specialization from deeplearning.ai 
+      - [my note for neural networks and deep learning]
 
 <!--
 # Coding Language (foundation)
