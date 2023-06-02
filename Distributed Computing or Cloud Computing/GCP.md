@@ -141,3 +141,86 @@ XGBoost 库概述
 - 集成学习算法结合了多个基本模型以产生最佳的预测模型。 与尝试从训练数据中学习假设的普通机器学习方法相反，集成方法尝试构建和组合许多假设。 使用集成方法时，重点放在泛化上，由于算法的特定性质或由于选择的训练集而导致的偏差方差折衷，有时基础学习器会忽略它。
 - bagging和boosting是广泛使用的集成方法。 这些是一种简单的组装技术，使用一些模型平均技术来共同构建许多独立的预测变量/模型/学习器（例如平均加权，多数或平均法线）
 - 另一个更大的问题是如何确保基础学习器不相互关联。 确保这些基本共同学习器的预测彼此独立是很重要的。 否则，它将排除整体建模的优化预测模型。??
+
+集成学习如何决定最佳预测模型？
+- 产生的误差尽可能低时，确定最佳模型，而损失函数的较低值确定最小值。 损失函数用于衡量预测模型可以预测预期结果的程度。 查找最小函数点的最常见方法是梯度下降。总而言之，我们必须首先了解导致模型误差的原因，才能真正了解集成模式背后的原因。 任何模型的误差都可以在数学上分为三种类型。
+- 可减少的误差 – 偏差： 偏差是预测值和实际值之间的距离。 如果模型具有很高的偏差度，则意味着该模型过于简单，无法捕获支撑数据的复杂性。
+- 可减少的误差 – 方差： 当模型在经过训练的数据集上良好但在新数据集（例如测试数据集或验证数据集）上表现不佳时，就会发生方差。 方差告诉我们如何分散实际值。 高方差会导致过拟合，这意味着算法模型中训练数据中存在随机噪声。 如果模型显示出很高的方差，则它会变得非常灵活，并适应训练集的数据点。？？
+- 不可减少的误差： 不可减少的误差是无论您使用哪种机器学习算法都无法将其最小化的误差。 它们通常是由可能影响输出变量的未知变量引起的。 改善不可减少误差的预测的唯一方法是识别和预测那些外部影响。
+![总误差](https://github.com/tinghe14/MLE-Learner/blob/693d5029f101d72c798425dfa37e098d0741e6af/Distributed%20Computing%20or%20Cloud%20Computing/%E6%80%BB%E8%AF%AF%E5%B7%AE.png)
+
+XGBoost
+- 以下是 XGboost 使其独特的一些重要功能：
+  - 并行化：在 XGBoost 中并行构建顺序树。 在 XGBoost 中，为了缩短运行时间，通过初始化全局扫描并使用所有实例的并行线程进行排序来交换循环的顺序。 此开关通过抵消任何并行开销来提高算法效率??
+  - 停止标准：在梯度提升框架中，用于树分割的停止标准基于分割时的负损失函数。 但是，对于 XGBoost，它将按指定的max_depth参数开始向后修剪树。 这是一种深度优先的方法，可以提高算法的整体性能和效率??
+  - 最大硬件资源使用率：XGBoost 旨在最大程度地利用硬件资源。 它通过每棵树中的内部缓冲区利用系统缓存来存储梯度统计信息。 其他改进包括计算核外和优化可用磁盘空间，同时处理不适合内存的大数据帧??
+
+训练和存储 XGBoost 机器学习模型
+- 在本节中，我们将研究如何使用 Google AI Hub 训练和存储机器学习模型。 AI Hub 是一站式存储，用于检测，共享和部署机器学习模型。 它是可重用的模型目录，可以快速安装在 AI 平台执行环境中。 该目录包含基于以下通用框架的模型设计的汇编：TensorFlow，PyTorch，Keras，scikit-learn 和 XGBoost。 每种模型都可以包装由 GPU 或 TPU，Jupyter 笔记本和 Google 自己的 AI API 支持的深度学习 VM，格式可以在 Kubeflow 中实现。借助.../text_classification_rapids_framework.py处的代码，我们将 XGBoost 与 RAPIDS 框架一起用于文本分类。
+- 从算法上讲，此代码执行以下步骤：
+  - 导入了必要的包。 在较高级别上，此代码使用OS，google.cloud，cudf(RAPID)，sklearn，pandas和xgboost。 它还会导入pynvml，这是一个 Python 库，用于低级 CUDA 库，用于 GPU 管理和监视。
+  - 接下来，代码将安装miniconda库和 RAPIDS 平台，然后设置 NVIDIA GPU 所需的一些环境变量。
+  - 代码的下一部分将设置访问 Google API 所需的一些常量，例如project id和bucket id。
+  - 然后，该代码从 GCS 存储桶中下载训练数据（text_classification_emp.csv）。 然后将其存储在本地作业目录中以供进一步使用。
+  - 代码的下一部分使用\n分割 CSV，并创建两个数组，一个数组用于标签（目标变量），另一个数组用于文本（预测变量）。
+  - 然后，它创建一个 Pandas DataFrame，然后将其转换为与基础 GPU 兼容的 CUDF DataFrame。 这样做是为了确保所有其他操作都利用基础 GPU。
+  - 然后，按照 80%-20% 的规则将数据分为训练和测试数据集。
+  - 然后，标签编码器用于将标签编码为向量值。
+  - 之后，在字符级别上计算 TF-IDF。
+  - 最后，使用 XGBoost 库训练模型。
+
+要提交前面的代码来训练模型，您必须运行以下命令。 此命令是标准google-ai-platform CLI，该 CLI 提交训练说明以在 Google Cloud AI 平台上训练任何模型：
+~~~
+gcloud ai-platform jobs submit training $JOB_NAME \
+--job-dir=$JOB_DIR \
+--package-path=$TRAINING_PACKAGE_PATH \
+--module-name=$MAIN_TRAINER_MODULE \
+--region=$REGION \
+--runtime-version=$RUNTIME_VERSION \
+--python-version=$PYTHON_VERSION \
+--config=config.yaml
+~~~
+
+可以按照以下方法将那边的环境变量设置为job.properties，并且在运行gcloud ai-platform作业之前必须先获取job.properties的源。 可以在以下代码中看到一个示例：
+~~~
+PROJECT_ID=test-project-id
+BUCKET_ID=ml-assets
+JOB_NAME=gpu_text_classification_$(date +"%Y%m%d_%H%M%S")
+JOB_DIR=gs://${BUCKET_ID}/xgboost_job_dir
+TRAINING_PACKAGE_PATH="text_classification"
+MAIN_TRAINER_MODULE=text_classification.train
+REGION=us-central1
+RUNTIME_VERSION=1.13
+PYTHON_VERSION=3.5
+~~~
+
+特定于 GPU 的config.yml文件的内容如下：
+~~~
+trainingInput:
+  scaleTier: CUSTOM
+  # Configure a master worker with 4 K80 GPUs
+  masterType: complex_model_m_gpu
+  # Configure 9 workers, each with 4 K80 GPUs
+  workerCount: 9
+  workerType: complex_model_m_gpu
+  # Configure 3 parameter servers with no GPUs
+  parameterServerCount: 3
+  parameterServerType: large_model
+~~~
+
+包的结构如下块所示：
+~~~
+text_classification
+|
+|__ __init__.py
+|__ config.yml
+|__ run.sh
+|__ job.properties
+|__ train.py
+~~~
+
+使用已训练的 XGBoost 模型
+![使用XGBoost1](https://github.com/tinghe14/MLE-Learner/blob/9427015c89ded9dbfe1bd9f4d29c814a68d433a1/Distributed%20Computing%20or%20Cloud%20Computing/xgboost%E4%BD%BF%E7%94%A81.png)
+![使用XGBoost2](https://github.com/tinghe14/MLE-Learner/blob/9427015c89ded9dbfe1bd9f4d29c814a68d433a1/Distributed%20Computing%20or%20Cloud%20Computing/xgboost%E4%BD%BF%E7%94%A82.png)
+![使用XGBoost3](https://github.com/tinghe14/MLE-Learner/blob/9427015c89ded9dbfe1bd9f4d29c814a68d433a1/Distributed%20Computing%20or%20Cloud%20Computing/xgboost%E4%BD%BF%E7%94%A83.png)
+![使用XGBoost4](https://github.com/tinghe14/MLE-Learner/blob/9427015c89ded9dbfe1bd9f4d29c814a68d433a1/Distributed%20Computing%20or%20Cloud%20Computing/xgboost%E4%BD%BF%E7%94%A84.png)
