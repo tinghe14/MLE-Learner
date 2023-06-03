@@ -9,6 +9,7 @@ none
 
 # W2: Neural Networks Basic
 Set up a machine learning problem with a neural network mindset and use vectorization to speed up your models.
+### Logistic regression as neural network
 
 To make implementation easier, it would be convenient to stack X(features) in columns (so do for the Y(output)) feature matrix, X: R[n_x x m_x], output matrix, Y: R[1 x m]
 - n_x rows: n_x features
@@ -33,7 +34,6 @@ logistic regression: y_hat = P(y=1 | x), when training the logistic regression, 
     - if y=0, loss = -log(1 - y_hat)
 - cost function: works on entire dataset, so is going to be the average of sum of loss function apply to each training sample at a time -> 1/m * sum of loss function
 
-### Logistic regression as neural network
 gradient descent: to learn and train your parameter
 - initialize w and b to some initial value (for logistic regression any initlization can work, usually you initialize the values of 0; because the function is convext no matter what the initalization method choose, you should get to the same point or roughly the same point)
 - gradient descent does is it starts at that initial point and then takes a step in the steepest downhill direction as quickly down as possible, and repeat the process until the algorithm converage
