@@ -38,7 +38,14 @@ gradient descent: to learn and train your parameter
 - initialize w and b to some initial value (for logistic regression any initlization can work, usually you initialize the values of 0; because the function is convext no matter what the initalization method choose, you should get to the same point or roughly the same point)
 - gradient descent does is it starts at that initial point and then takes a step in the steepest downhill direction as quickly down as possible, and repeat the process until the algorithm converage
 
-derivatives
+derivates with a computation graph
+- forward: left to right calculation to compute the cost function you might want to optmize
+- back propagation: right to left calculation to compute derivatives
+- chain rule
+
+gradient descent on m examples
+- overall gradient: the average of derivates respect to w_1 of the individual loss terms
+
 
  
 ### python and vectorization
