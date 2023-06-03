@@ -272,4 +272,7 @@ Google AI Platform 深度学习映像
 ![使用Keras框架训练模型2](https://github.com/tinghe14/MLE-Learner/blob/f790a902bf00169afa9de42f146deae32115b29a/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8%20Keras%20%E6%A1%86%E6%9E%B6%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%202.png)
 ![使用Keras框架训练模型3](https://github.com/tinghe14/MLE-Learner/blob/f790a902bf00169afa9de42f146deae32115b29a/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8%20Keras%20%E6%A1%86%E6%9E%B6%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%203.png)
 
-使用google ai平台训练模型
+### 使用google ai平台训练模型
+上节，学习了如何使用keras训练框架。在本节中，我们将在google cloud ai platform上训练相同的模型。核心代码库将保持不变，但是训练模型的方式将有所不同。
+1. 设置代码的目录结构。根据google cloud ai平台的要求命名文件，看起来像这样：
+
