@@ -74,7 +74,10 @@ $`\textcolor{green}{\text{3}}`$
 # Deep Learning
 <a id='DL'></a>
 - deep learning specialization from deeplearning.ai 
-      - [my note for neural networks and deep learning]
+      - [my note for C#1 neural networks and deep learning]()
+      - [improving deep neural networks: hyperparameter tuning, regularization and optmization]
+      - [structing your machine learning project]
+      - [natural language processing: building sequence models]
 
 <!--
 # Coding Language (foundation)
