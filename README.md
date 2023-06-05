@@ -70,17 +70,17 @@ $`\textcolor{green}{\text{3}}`$
 ## GCP
 <a id='gcp'></a>
 - [my note for GCP in Chinese](https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/SUMMARY.md)
-      - [PyTorch code sample on GCP 1](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/quickstart):train a nn model using custom container and built-in image dataset 
-      - [PyTorch code sample on GCP 2](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/custom_container):train a nn model using custom container with structured dataset
-      - [PyTorch code sample on GCP 3](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/hp_tuning):hyperparameter tuning
+  - [PyTorch code sample on GCP 1](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/quickstart):train a nn model using custom container and built-in image dataset 
+  - [PyTorch code sample on GCP 2](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/custom_container):train a nn model using custom container with structured dataset
+  - [PyTorch code sample on GCP 3](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/hp_tuning):hyperparameter tuning
 
 # Deep Learning
 <a id='dl'></a>
 - deep learning specialization from deeplearning.ai 
-      - [my note for C#1 neural networks and deep learning]()
-      - [improving deep neural networks: hyperparameter tuning, regularization and optmization]
-      - [structing your machine learning project]
-      - [natural language processing: building sequence models]
+  - [my note for C#1 neural networks and deep learning]()
+  - [improving deep neural networks: hyperparameter tuning, regularization and optmization]
+  - [structing your machine learning project]
+  - [natural language processing: building sequence models]
 
 <!--
 # Coding Language (foundation)
