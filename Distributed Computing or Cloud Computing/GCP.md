@@ -271,8 +271,165 @@ Google AI Platform 深度学习映像
 ![使用Keras框架训练模型1](https://github.com/tinghe14/MLE-Learner/blob/f790a902bf00169afa9de42f146deae32115b29a/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8%20Keras%20%E6%A1%86%E6%9E%B6%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%201.png)
 ![使用Keras框架训练模型2](https://github.com/tinghe14/MLE-Learner/blob/f790a902bf00169afa9de42f146deae32115b29a/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8%20Keras%20%E6%A1%86%E6%9E%B6%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%202.png)
 ![使用Keras框架训练模型3](https://github.com/tinghe14/MLE-Learner/blob/f790a902bf00169afa9de42f146deae32115b29a/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8%20Keras%20%E6%A1%86%E6%9E%B6%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%203.png)
-
 ### 使用google ai平台训练模型
 上节，学习了如何使用keras训练框架。在本节中，我们将在google cloud ai platform上训练相同的模型。核心代码库将保持不变，但是训练模型的方式将有所不同。
 1. 设置代码的目录结构。根据google cloud ai平台的要求命名文件，看起来像这样：
+![使用google ai平台训练模型1](https://github.com/tinghe14/MLE-Learner/blob/4c5d312b575cde47780e88af5f643c09c714a7aa/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8google%20ai%E5%B9%B3%E5%8F%B0%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B1.png)
+2. 需要将其他代码添加到前面代码中，以确保将模型保存到google cloud存储桶中。该代码如下：
+~~~
+PROJECT_ID="<project_id>" #change this
+BUCKET_ID="ml_assets"
+JOB_NAME = 'my_first_keras_job'
+JOB_DIR = 'gs://' + BUCKET_ID + '/keras-job-dir'
+REGION="<REGION>" #change this
+! gsutil ls -al gs://$BUCKET_ID
+print(JOB_DIR)
+export_path = tf.contrib.saved_model.save_keras_model(model, JOB_DIR + '/keras_export')
+print("Model exported to: ", export_path)
+#Verify model is created
+! gsutil ls -al $JOB_DIR/keras_export
+~~~
+以下屏幕截图显示了上述代码的输出：
+![使用google ai平台训练模型2](https://github.com/tinghe14/MLE-Learner/blob/f865891ee4b9c1556a09ab96e6dcc69493863a1e/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8google%20ai%E5%B9%B3%E5%8F%B0%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B2.png)
+3. 之后google cloud控制台的窗口中的存储桶 就会有对应信息：
+![使用google ai平台训练模型3](https://github.com/tinghe14/MLE-Learner/blob/bd3cc3ee74a1f4c50b4a4836629928eba76039bf/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8google%20ai%E5%B9%B3%E5%8F%B0%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B3.png)
+4. 最后，您必须用以下gcloud ai平台命令的形式提交训练工作：
+~~~
+#!/bin/sh
+PROJECT_ID="<project-id>" #change this
+BUCKET_ID="ml_assets"
+JOB_NAME='my_keras_job'
+JOB_DIR='gs://$BUCKET_ID/keras-job-dir'
+REGION="us-central1" #change this
+gcloud config set project $PROJECT_ID
+gcloud ai-platform jobs submit training $JOB_NAME \
+  --package-path trainer/ \
+  --module-name trainer.task \
+  --region $REGION \
+  --python-version 3.5 \
+  --runtime-version 1.13 \
+  --job-dir $JOB_DIR \
+  --stream-logs
+~~~
+![使用google ai平台训练模型4]()
+5. 此外，我们可以使用google cloud控制台可视化正在运行的作业
+![使用google ai平台训练模型5]()
+![使用google ai平台训练模型6]()
+![使用google ai平台训练模型7]()
+### 使用cloud machine engine的异步批量预测
+为了使用上一节中训练和导出的模型来提供在线预测，我们必须在ai平台中创建模型资源，并在其中创建版本资源，版本资源是合格模型有效得用于预测的资源。使用此框架，你可以多次调整，重新训练和管理ai平台中的所有版本。模型或版本是已存储在 AI 平台的模型服务中的高级学习解决方案的示例。 您可以使用已训练的标准模型（作为保存的模型）进行发布。 您也可以在创建版本时提供自定义代码（测试版）来处理预测。 让我们来看看：
+![使用cloud machine engine的异步批量预测1]()
+![使用cloud machine engine的异步批量预测2]()
+![使用cloud machine engine的异步批量预测3]()
+![使用cloud machine engine的异步批量预测4]()
+3. 现在，您已经创建了预测模型版本，您需要创建用于批量预测的python脚本。首先以以下代码所示的格式创建预测输入json:
+~~~
+{
+  "dataFormat": enum (DataFormat),
+  "outputDataFormat": enum (DataFormat),
+  "inputPaths": [
+    string
+  ],
+  "maxWorkerCount": string,
+  "region": string,
+  "runtimeVersion": string,
+  "batchSize": string,
+  "signatureName": string,
 
+  // Union field model_version can be only one of the following:
+  "modelName": string,
+  "versionName": string,
+  "uri": string
+  // End of list of possible types for union field model_version.
+  "outputPath": string
+}
+~~~
+让我们回顾一下前面代码中使用的每个参数：
+- 数据格式：用于输入文件进行预测的格式类型。 对于特定任务，所有输入文件必须具有相同的信息格式。 它可以是 JSON，TF_Record或TF_Record_GZIP格式。
+- 输出数据格式：用于预测输出文件的格式类型。
+- 输入路径：需要存储在 Google Cloud 存储中的输入数据文件的 URI。
+- 输出路径：云中要通过提供预测服务保存输出的位置。 您的项目需要被允许写到这个地方。
+- 模型名称和版本名称：您希望从中接收投影的模型名称和版本。 如果未指定版本，则使用模型的默认版本。 如果愿意，可以使用未部署的 SavedModel Cloud 存储路径，称为 Model URI。
+- 模型 URI：您要从中接收投影的模型名称和版本。 如果未指定版本，则使用模型的默认版本。 如果愿意，可以使用未部署的 SavedModel Cloud 存储路径，称为 Model URI。
+- 区域：Google Compute Engine 将在其中运行您的工作的区域。 为了执行预测任务并保存输入和输出信息以获取非常广泛的信息，所有内容都需要在同一区域中设置。
+- 最大工作器数（可选）：处理集群中用于此任务的最大预测节点数。 您可以通过这种方式为自动批量预测的缩放功能设置上限。 如果不设置值，则默认为 10。
+- 运行时版本（可选）：使用的 AI 平台的版本。 包含此选项以允许您指定要与 AI Platform 模型一起使用的运行时版本。 对于已部署的模型版本，应始终忽略此值，以告知服务使用在部署模型版本时指定的相同版本。
+- 签名名称（可选）：如果您保存的模型具有各种签名，则可以选择由 TensorFlow SavedModel 标识的备用输入/输出映射，以指定自定义 TensorFlow 签名名称。
+4. 以下python代码代表了如何构建json主体
+~~~
+import time
+import re
+
+def make_batch_job_body(project_name, input_paths, output_path,
+ model_name, region, data_format='JSON',
+ version_name=None, max_worker_count=None,
+ runtime_version=None):
+
+ project_id = 'projects/{}'.format(project_name)
+ model_id = '{}/models/{}'.format(project_id, model_name)
+ if version_name:
+ version_id = '{}/versions/{}'.format(model_id, version_name)
+~~~
+5.以model_name_batch_predict_YYYYMMDD_HHMMSS格式制作jobName：
+~~~
+timestamp = time.strftime('%Y%m%d_%H%M%S', time.gmtime())
+
+    # Make sure the project name is formatted correctly to work as the basis
+    # of a valid job name.
+    clean_project_name = re.sub(r'\W+', '_', project_name)
+
+    job_id = '{}_{}_{}'.format(clean_project_name, model_name,
+                           timestamp)
+~~~
+6.开始使用信息构建请求字典
+~~~
+body = {'jobId': job_id,
+            'predictionInput': {
+                'dataFormat': data_format,
+                'inputPaths': input_paths,
+                'outputPath': output_path,
+                'region': region}}   
+~~~
+7. 使用版本（如果存在）或模型（默认版本）（如果不存在）：
+~~~
+if version_name:
+ body['predictionInput']['versionName'] = version_id
+ else:
+ body['predictionInput']['modelName'] = model_id   
+~~~
+8. 如果指定，则仅包括最大数量的工作程序或运行时版本。 否则，让服务使用其默认值：
+~~~
+ if max_worker_count:
+        body['predictionInput']['maxWorkerCount'] = max_worker_count
+
+    if runtime_version:
+        body['predictionInput']['runtimeVersion'] = runtime_version
+
+    return body
+~~~
+9. 同样，用于调用 Prediction API 的 Python 代码如下：
+~~~
+    import googleapiclient.discovery as discovery
+
+    project_id = 'projects/{}'.format(project_name)
+
+    ml = discovery.build('ml', 'v1')
+    request = ml.projects().jobs().create(parent=project_id,
+                                          body=batch_predict_body)
+
+    try:
+        response = request.execute()
+
+        print('Job requested.')
+
+        # The state returned will almost always be QUEUED.
+        print('state : {}'.format(response['state']))
+
+    except errors.HttpError as err:
+        # Something went wrong, print out some information.
+        print('There was an error getting the prediction results.' +
+              'Check the details:')
+        print(err._get_reason())
+~~~
+前面的代码通过request.execute()方法调用发送预测请求，该请求以异步方式执行批量预测作业。
+在下一节中，我们将研究使用 [Cloud Machine Learning Engine 的实时预测(更多内容点击链接)](https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/05.md)，该引擎将范例转换为 Google Cloud Platform 上的完全无服务器的 ML。
