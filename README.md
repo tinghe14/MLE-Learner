@@ -16,14 +16,14 @@ $`\textcolor{green}{\text{3}}`$
       - [python feature](#pf)
       - object orient programming
       - vectorize: numpy
-      - [basic algorithm from scratch](#BAFS1)
-      - [pytorch syntax overview](#PSO)
-3. [software design and unit test](#SDUT)
+      - [basic algorithm from scratch](#bafs1)
+      - [pytorch syntax overview](#pso)
+3. [software design and unit test](#sdut)
       - object orient design
       - git
       - unit test
       - web development
-      - [computer architecture](#CA)
+      - [computer architecture](#ca)
 5. machine learning system design
       - educative course
       - youtuber 
@@ -31,17 +31,17 @@ $`\textcolor{green}{\text{3}}`$
       - research paper
 7. data manipulation
 8. high preformance computing
-9. [distributed computing or cloud computing](#DCCC)
+9. [distributed computing or cloud computing](#dccc)
       - cluster
-      - [GCP](#GCP)
+      - [GCP](#gcp)
       - docker
 11. machine learning
       - basic algorithm from scrach
 13. natural lanuage processing
       - basic algorithm from scrach
-14. [deep learning](#DL)
+14. [deep learning](#dl)
       - basic algorithm from scratch
-      - [deeplearning.ai course](#DLAIC)
+      - [deeplearning.ai course](#dlaic)
 16. big data
 17. AIML in production
       - educative course
@@ -52,27 +52,27 @@ $`\textcolor{green}{\text{3}}`$
 ## Python Feature
 <a id='pf'></a>
 ## Basic Algorithms from scratch
-<a id='BAFL1'></a>
+<a id='bafs1'></a>
 - [sorting]()
 ## pytorch syntax overview
-<a id='PSO'></a>
+<a id='pso'></a>
 - [my note for Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/cffde655d457b99a9a4a83f43e3b6f902bbaaf7a/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md): pycharm IDE + important modules for training and validating nn models including tensorboard
 
 # Software Design and Unit Test
-<a id='SDUT'></a>
+<a id='sdut'></a>
 ## Computer Architecture
-<a id='CA'></a>
+<a id='ca'></a>
 - [computer memory architecture](https://github.com/tinghe14/MLE-Learner/blob/7f686e86a8c86761d6068b0e69517632881cd9d7/Software%20Design%20and%20Unit%20Test/Computer%20Architecture/computer_memory_hierarchy.md)
 
 
 # Distributed Computing or Cloud Computing
-<a id='DCCC'></a>
+<a id='dccc'></a>
 ## GCP
-<a id='GCP'></a>
+<a id='gcp'></a>
 - [note in Chinese(https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/SUMMARY.md)
 
 # Deep Learning
-<a id='DL'></a>
+<a id='dl'></a>
 - deep learning specialization from deeplearning.ai 
       - [my note for C#1 neural networks and deep learning]()
       - [improving deep neural networks: hyperparameter tuning, regularization and optmization]
