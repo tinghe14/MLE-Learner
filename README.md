@@ -69,10 +69,11 @@ $`\textcolor{green}{\text{3}}`$
 <a id='dccc'></a>
 ## GCP
 <a id='gcp'></a>
-- [my note for GCP in Chinese](https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/SUMMARY.md)
-  - [PyTorch code sample on GCP 1](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/quickstart):train a nn model using custom container and built-in image dataset 
-  - [PyTorch code sample on GCP 2](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/custom_container):train a nn model using custom container with structured dataset
-  - [PyTorch code sample on GCP 3](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/hp_tuning):hyperparameter tuning
+- [my note for GCP in Chinese](https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/SUMMARY.md)not clear, recommend the second source listed here
+- [official Github repo](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main): include information about project setup, docker image creation and sample code of pytorch
+  - pytorch code sample using published container and built-in dataset, [tutorial](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/published_container):container/docker image, can think as conda environment locally
+  - pytorch code sample using custom container and built-in dataset,[tutorial](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/custom_container): additional docker image creation file
+  - pytorch code sample using custom container with hyperparameter tuning and built-in dataset,[tutorial](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main/pytorch/containers/hp_tuning): additional hyperparameter tuning
 
 # Deep Learning
 <a id='dl'></a>
