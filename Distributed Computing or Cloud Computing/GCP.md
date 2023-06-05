@@ -17,7 +17,7 @@ Course Content
   - 使用DialogFlow的智能对话应用
 - Google Cloud Platform上的TensorFlow
   - 了解云TPU
-  - 使用Cloud ML Engine实现TensorFlow模型
+  - [使用Cloud ML Engine实现TensorFlow模型](https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/08.md):内置算法和自定义算法的模版
   - 构建预测应用
 - 构建应用和即将发布的功能: 本节总结了从前几章获得的所有知识。 它由一章组成。 我们将使用 Google Cloud Platform（GCP）上的各种组件来构建端到端的 AI 应用。 本章提供了使用 GCP 快速构建生产就绪应用的一般过程。
   - 构建一个ai应用
