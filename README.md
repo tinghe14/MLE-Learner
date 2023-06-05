@@ -12,8 +12,8 @@ $`\textcolor{green}{\text{3}}`$
 <a id='tag'></a> [pointer](#tag)
 
 # Table of Contents (ongoing)
-1. [coding language](#CL)
-      - [python feature](#PF)
+1. [coding language](#cl)
+      - [python feature](#pf)
       - object orient programming
       - vectorize: numpy
       - [basic algorithm from scratch](#BAFS1)
@@ -48,9 +48,9 @@ $`\textcolor{green}{\text{3}}`$
       - deeplearning.ai course
 
 # Coding Language
-<a id='CL'></a>
+<a id='cl'></a>
 ## Python Feature
-<a id='PF'></a>
+<a id='pf'></a>
 ## Basic Algorithms from scratch
 <a id='BAFL1'></a>
 - [sorting]()
