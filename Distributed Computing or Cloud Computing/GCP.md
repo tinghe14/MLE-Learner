@@ -311,17 +311,17 @@ gcloud ai-platform jobs submit training $JOB_NAME \
   --job-dir $JOB_DIR \
   --stream-logs
 ~~~
-![使用google ai平台训练模型4]()
+![使用google ai平台训练模型4](https://github.com/tinghe14/MLE-Learner/blob/2c0b197af5c064d98460e716b9185b9e4c9fbd83/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8google%20ai%E5%B9%B3%E5%8F%B0%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B4.png)
 5. 此外，我们可以使用google cloud控制台可视化正在运行的作业
-![使用google ai平台训练模型5]()
-![使用google ai平台训练模型6]()
-![使用google ai平台训练模型7]()
+![使用google ai平台训练模型5](https://github.com/tinghe14/MLE-Learner/blob/2c0b197af5c064d98460e716b9185b9e4c9fbd83/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8google%20ai%E5%B9%B3%E5%8F%B0%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B5.png)
+![使用google ai平台训练模型6](https://github.com/tinghe14/MLE-Learner/blob/2c0b197af5c064d98460e716b9185b9e4c9fbd83/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8google%20ai%E5%B9%B3%E5%8F%B0%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B6.png)
+![使用google ai平台训练模型7](https://github.com/tinghe14/MLE-Learner/blob/2c0b197af5c064d98460e716b9185b9e4c9fbd83/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8google%20ai%E5%B9%B3%E5%8F%B0%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B7.png)
 ### 使用cloud machine engine的异步批量预测
 为了使用上一节中训练和导出的模型来提供在线预测，我们必须在ai平台中创建模型资源，并在其中创建版本资源，版本资源是合格模型有效得用于预测的资源。使用此框架，你可以多次调整，重新训练和管理ai平台中的所有版本。模型或版本是已存储在 AI 平台的模型服务中的高级学习解决方案的示例。 您可以使用已训练的标准模型（作为保存的模型）进行发布。 您也可以在创建版本时提供自定义代码（测试版）来处理预测。 让我们来看看：
-![使用cloud machine engine的异步批量预测1]()
-![使用cloud machine engine的异步批量预测2]()
-![使用cloud machine engine的异步批量预测3]()
-![使用cloud machine engine的异步批量预测4]()
+![使用cloud machine engine的异步批量预测1](https://github.com/tinghe14/MLE-Learner/blob/2c0b197af5c064d98460e716b9185b9e4c9fbd83/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8cloud%20machine%20engine%E7%9A%84%E5%BC%82%E6%AD%A5%E6%89%B9%E9%87%8F%E9%A2%84%E6%B5%8B1.png)
+![使用cloud machine engine的异步批量预测2](https://github.com/tinghe14/MLE-Learner/blob/2c0b197af5c064d98460e716b9185b9e4c9fbd83/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8cloud%20machine%20engine%E7%9A%84%E5%BC%82%E6%AD%A5%E6%89%B9%E9%87%8F%E9%A2%84%E6%B5%8B2.png)
+![使用cloud machine engine的异步批量预测3](https://github.com/tinghe14/MLE-Learner/blob/2c0b197af5c064d98460e716b9185b9e4c9fbd83/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8cloud%20machine%20engine%E7%9A%84%E5%BC%82%E6%AD%A5%E6%89%B9%E9%87%8F%E9%A2%84%E6%B5%8B3.png)
+![使用cloud machine engine的异步批量预测4](https://github.com/tinghe14/MLE-Learner/blob/2c0b197af5c064d98460e716b9185b9e4c9fbd83/Distributed%20Computing%20or%20Cloud%20Computing/%E4%BD%BF%E7%94%A8cloud%20machine%20engine%E7%9A%84%E5%BC%82%E6%AD%A5%E6%89%B9%E9%87%8F%E9%A2%84%E6%B5%8B4.png)
 3. 现在，您已经创建了预测模型版本，您需要创建用于批量预测的python脚本。首先以以下代码所示的格式创建预测输入json:
 ~~~
 {
