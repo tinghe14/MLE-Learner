@@ -56,7 +56,7 @@ $`\textcolor{green}{\text{3}}`$
 - [sorting]()
 ## pytorch syntax overview
 <a id='PSO'></a>
-- [note for Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/77a8595d0c3815723580c47f2af0289aaabc65fc/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md)
+- [my note for Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/cffde655d457b99a9a4a83f43e3b6f902bbaaf7a/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md): pycharm IDE + important modules for training and validating nn models including tensorboard
 
 # Software Design and Unit Test
 <a id='SDUT'></a>
