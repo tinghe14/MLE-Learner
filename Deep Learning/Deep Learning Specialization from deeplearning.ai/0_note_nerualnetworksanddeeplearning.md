@@ -45,7 +45,8 @@ derivates with a computation graph
 
 gradient descent on m examples
 - overall gradient: the average of derivates respect to w_1 of the individual loss terms
-
+![0](https://github.com/tinghe14/MLE-Learner/blob/9a8afa2d5e5fbd31e180d63c7b45ee4a4cfb6162/Deep%20Learning/Deep%20Learning%20Specialization%20from%20deeplearning.ai/0_gradient%20descent%20on%20m%20example%200.png)
+![1](https://github.com/tinghe14/MLE-Learner/blob/9a8afa2d5e5fbd31e180d63c7b45ee4a4cfb6162/Deep%20Learning/Deep%20Learning%20Specialization%20from%20deeplearning.ai/0_gradient%20descent%20on%20m%20example%201.png)
 
  
 ### python and vectorization
