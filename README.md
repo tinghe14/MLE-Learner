@@ -51,6 +51,8 @@ $`\textcolor{green}{\text{3}}`$
 <a id='cl'></a>
 ## Python Feature
 <a id='pf'></a>
+- my note - [python]()
+- blog in Chinese - [os package 1](https://blog.csdn.net/longshenlmj/article/details/13294871),[os package 2](https://zhuanlan.zhihu.com/p/600048459): deal with path
 ## Basic Algorithms from scratch
 <a id='bafs1'></a>
 - [sorting]()
