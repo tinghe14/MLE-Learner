@@ -56,7 +56,7 @@ $`\textcolor{green}{\text{3}}`$
 - [sorting]()
 ## pytorch syntax overview
 <a id='pso'></a>
-- [my note for Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/cffde655d457b99a9a4a83f43e3b6f902bbaaf7a/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md): pycharm IDE + important modules for training and validating nn models including tensorboard
+- my note - [Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/cffde655d457b99a9a4a83f43e3b6f902bbaaf7a/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md): pycharm IDE + important modules for training and validating nn models including tensorboard
 
 # Software Design and Unit Test
 <a id='sdut'></a>
@@ -79,7 +79,7 @@ $`\textcolor{green}{\text{3}}`$
 # Deep Learning
 <a id='dl'></a>
 - deep learning specialization from deeplearning.ai 
-  - [my note for C#1 neural networks and deep learning]()
+  - my note - [Course #1 neural networks and deep learning]()
   - [improving deep neural networks: hyperparameter tuning, regularization and optmization]
   - [structing your machine learning project]
   - [natural language processing: building sequence models]
