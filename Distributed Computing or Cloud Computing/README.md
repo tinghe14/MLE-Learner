@@ -8,3 +8,5 @@
 3. official GCP tutorial: updated but It can't follow
     - [container part](https://cloud.google.com/ai-platform/docs/getting-started-keras)
     - [Training PyTorch Transformers on Google Cloud AI Platform](https://nordcloud.com/tech-community/training-pytorch-transformers-on-google-cloud-ai-platform/): include [best practices](https://cloud.google.com/ai-platform/training/docs/packaging-trainer) to packing code to GCP, and [recommended project structure](https://cloud.google.com/ai-platform/training/docs/packaging-trainer#project-structure)
+4. official Vertex AI tutorial: most updated and clear to follow
+    - [Youtube, overview of documentation](https://www.youtube.com/watch?v=VRQXIiNLdAk)
