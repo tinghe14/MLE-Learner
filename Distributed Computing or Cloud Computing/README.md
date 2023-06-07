@@ -9,7 +9,7 @@
     - [container part](https://cloud.google.com/ai-platform/docs/getting-started-keras)
     - [Training PyTorch Transformers on Google Cloud AI Platform](https://nordcloud.com/tech-community/training-pytorch-transformers-on-google-cloud-ai-platform/): include [best practices](https://cloud.google.com/ai-platform/training/docs/packaging-trainer) to packing code to GCP, and [recommended project structure](https://cloud.google.com/ai-platform/training/docs/packaging-trainer#project-structure)
 4. official Vertex AI tutorial: most updated and clear to follow
-    - [Youtube, overview of documentation](https://www.youtube.com/watch?v=VRQXIiNLdAk): use pretrained docker image and share the skeleton of image file
+    - [Youtube, overview of documentation](https://www.youtube.com/watch?v=VRQXIiNLdAk): use pretrained docker image and share the skeleton of image file; previous episode contains how to upload local data to cloud storage
     - tutorial - [setup](https://cloud.google.com/vertex-ai/docs/start/cloud-environment)
     - tutorial - [export environment at GCI](https://cloud.google.com/vertex-ai/docs/tutorials/text-classification-automl)
     - right now at uploading file, which they don't accept tsv, need to convert to csv and change corresponding code first , https://www.geeksforgeeks.org/python-convert-tsv-to-csv-file/
