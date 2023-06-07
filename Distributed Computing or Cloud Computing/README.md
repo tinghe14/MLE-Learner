@@ -22,6 +22,7 @@
             - error message I had - [file can't find]: the file directory should be /gcs/my bucket name/my directory name not gs:// -> wrong directin
             - more about file can't find: [Mount a Cloud Storage bucket using Cloud Storage FUSE](https://cloud.google.com/storage/docs/gcsfuse-quickstart-mount-bucket):Learn how to mount a Cloud Storage bucket as a local filesystem using Cloud Storage FUSE, so you can interact with your objects using standard file system semantics.
                 - error message I had - [Install Cloud Storage FUSE](): previous tutorial only work for linux not mac
+                - tutorial - [Recommended Training Application Structure for Vertex AI and GCS FUSE](https://github.com/GoogleCloudPlatform/vertex-ai-samples/blob/main/community-content/pytorch_text_classification_using_vertex_sdk_and_gcloud/pytorch-text-classification-vertex-ai-train-tune-deploy.ipynb)
     - tutorial - [setup](https://cloud.google.com/vertex-ai/docs/start/cloud-environment)
     - tutorial - [export environment at GCI](https://cloud.google.com/vertex-ai/docs/tutorials/text-classification-automl)
     - tutorial - [Create a Python training application for a prebuilt container](https://cloud.google.com/vertex-ai/docs/training/create-python-pre-built-container?_ga=2.78161364.1169932329.1685983386-1703019298.1684697406&_gac=1.123091193.1685635930.Cj0KCQjw4NujBhC5ARIsAF4Iv6dUxaJlcW7I1ourBHTusyrNz8FSF2JwF3IkOTpaH20BRe0oxoX7LkUaAremEALw_wcB)
