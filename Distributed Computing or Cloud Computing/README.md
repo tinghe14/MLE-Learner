@@ -12,4 +12,6 @@
     - [Youtube, overview of documentation](https://www.youtube.com/watch?v=VRQXIiNLdAk): use pretrained docker image and share the skeleton of image file; previous episode contains how to upload local data to cloud storage
     - tutorial - [setup](https://cloud.google.com/vertex-ai/docs/start/cloud-environment)
     - tutorial - [export environment at GCI](https://cloud.google.com/vertex-ai/docs/tutorials/text-classification-automl)
-    - right now at uploading file, which they don't accept tsv, need to convert to csv and change corresponding code first , https://www.geeksforgeeks.org/python-convert-tsv-to-csv-file/
+    - tutorial - [Create a Python training application for a prebuilt container](https://cloud.google.com/vertex-ai/docs/training/create-python-pre-built-container?_ga=2.78161364.1169932329.1685983386-1703019298.1684697406&_gac=1.123091193.1685635930.Cj0KCQjw4NujBhC5ARIsAF4Iv6dUxaJlcW7I1ourBHTusyrNz8FSF2JwF3IkOTpaH20BRe0oxoX7LkUaAremEALw_wcB)
+        - tutorial - [Containerize and run training code locally](https://cloud.google.com/vertex-ai/docs/training/containerize-run-code-local)
+        - tutorial - [Push the container to Artifact Registry](https://cloud.google.com/vertex-ai/docs/training/create-custom-container#build-and-push-container)
