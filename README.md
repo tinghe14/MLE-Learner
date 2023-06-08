@@ -34,7 +34,7 @@ $`\textcolor{green}{\text{3}}`$
 9. [distributed computing or cloud computing](#dccc)
       - cluster
       - [GCP](#gcp)
-      - docker
+      - [docker](#docker)
 11. machine learning
       - basic algorithm from scrach
 13. natural lanuage processing
@@ -49,28 +49,31 @@ $`\textcolor{green}{\text{3}}`$
 
 # Coding Language
 <a id='cl'></a>
-## Python Feature
+### Python Feature
 <a id='pf'></a>
 - my note - [python]()
 - blog in Chinese - [os package 1](https://blog.csdn.net/longshenlmj/article/details/13294871), [os package 2](https://zhuanlan.zhihu.com/p/600048459): deal with path
-## Basic Algorithms from scratch
+### Basic Algorithms from scratch
 <a id='bafs1'></a>
 - [sorting](https://github.com/tinghe14/MLE-Learner/blob/babadbb78f3d3b3a9cf939d371975ad200ffff71/Coding%20Language/Basic%20Algorithm%20from%20Scrach/sorting.md)
-## pytorch syntax overview
+### pytorch syntax overview
 <a id='pso'></a>
 - my note - [Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/cffde655d457b99a9a4a83f43e3b6f902bbaaf7a/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md): pycharm IDE + important modules for training and validating nn models including tensorboard
 
 # Software Design and Unit Test
 <a id='sdut'></a>
-## Computer Architecture
+### Computer Architecture
 <a id='ca'></a>
 - [computer memory architecture](https://github.com/tinghe14/MLE-Learner/blob/7f686e86a8c86761d6068b0e69517632881cd9d7/Software%20Design%20and%20Unit%20Test/Computer%20Architecture/computer_memory_hierarchy.md)
 
 
 # Distributed Computing or Cloud Computing
 <a id='dccc'></a>
-## GCP
+### GCP
 <a id='gcp'></a>
+- my note - [deploy AI model on GCP](https://github.com/tinghe14/MLE-Learner/blob/4384baf120a54c55f11ca2b0d3a2ed9342e0e246/Distributed%20Computing%20or%20Cloud%20Computing/README.md)
+### docker
+<a id='docker'></a>
 - my note -
 
 # Deep Learning
