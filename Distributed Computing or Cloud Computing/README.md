@@ -1,4 +1,4 @@
-# Material that I have learnt
+# Material that I have looked into
 1. [GCP in Chinese](https://github.com/tinghe14/apachecn-dl-zh/blob/master/docs/handson-ai-gcp/SUMMARY.md): not clear, waste of time
 2. official GCP repo: clear but the docker image part has been outdated
     - [Github repo](https://github.com/GoogleCloudPlatform/cloudml-samples/tree/main): include information about project setup, docker image creation and sample code of pytorch,BUT container part is too old
