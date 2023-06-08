@@ -52,10 +52,10 @@ $`\textcolor{green}{\text{3}}`$
 ## Python Feature
 <a id='pf'></a>
 - my note - [python]()
-- blog in Chinese - [os package 1](https://blog.csdn.net/longshenlmj/article/details/13294871),[os package 2](https://zhuanlan.zhihu.com/p/600048459): deal with path
+- blog in Chinese - [os package 1](https://blog.csdn.net/longshenlmj/article/details/13294871), [os package 2](https://zhuanlan.zhihu.com/p/600048459): deal with path
 ## Basic Algorithms from scratch
 <a id='bafs1'></a>
-- [sorting]()
+- [sorting](https://github.com/tinghe14/MLE-Learner/blob/babadbb78f3d3b3a9cf939d371975ad200ffff71/Coding%20Language/Basic%20Algorithm%20from%20Scrach/sorting.md)
 ## pytorch syntax overview
 <a id='pso'></a>
 - my note - [Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/cffde655d457b99a9a4a83f43e3b6f902bbaaf7a/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md): pycharm IDE + important modules for training and validating nn models including tensorboard
