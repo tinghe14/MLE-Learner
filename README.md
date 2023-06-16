@@ -18,6 +18,7 @@ $`\textcolor{green}{\text{3}}`$
       - vectorize: numpy
       - [basic algorithm from scratch](#bafs1)
       - [pytorch syntax overview](#pso)
+      - [regular expression](#re)
 3. [software design and unit test](#sdut)
       - object orient design
       - git
@@ -59,6 +60,10 @@ $`\textcolor{green}{\text{3}}`$
 ### pytorch syntax overview
 <a id='pso'></a>
 - my note - [Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/cffde655d457b99a9a4a83f43e3b6f902bbaaf7a/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md): pycharm IDE + important modules for training and validating nn models including tensorboard
+### regular expression
+<a id='re'></a>
+- [post](https://pynative.com/python-find-position-of-regex-match-using-span-start-end/)
+- [post](https://www.geeksforgeeks.org/re-matchobject-group-function-in-python-regex/)
 
 # Software Design and Unit Test
 <a id='sdut'></a>
