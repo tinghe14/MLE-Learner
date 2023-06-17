@@ -27,7 +27,7 @@ logistic regression: y_hat = P(y=1 | x), when training the logistic regression, 
  - notation: i superscript means the ith example
  - loss function: is a function to measure how good output y_hat is when the true label is y
   - might seems nature to use square error, but in logistic regression people don't usually do this. Beacuse when you come to learn the parameters, it is an optmization problem. it is non-convex which means when applying gradient descent, you may end up with many local optima, may not find a global optimum
-  - real loss function of logistic reg which is convex: -ylogy_hat - (1-y)log(1-y_hat)
+  - $`\textcolor{red}{\text{real loss function of logistic reg which is convex: -ylogy_hat - (1-y)log(1-y_hat)}}`$
     - some intuitions on why this loss function makes sense
     - we want to make it smaller
     - if y=1, Loss = -logy_hat -> want y_hat to be large because y_hat is you know the sigmoid function, it can never be bigger than one
@@ -47,7 +47,15 @@ gradient descent on m examples
 - overall gradient: the average of derivates respect to w_1 of the individual loss terms
 ![0](https://github.com/tinghe14/MLE-Learner/blob/9a8afa2d5e5fbd31e180d63c7b45ee4a4cfb6162/Deep%20Learning/Deep%20Learning%20Specialization%20from%20deeplearning.ai/0_gradient%20descent%20on%20m%20example%200.png)
 ![1](https://github.com/tinghe14/MLE-Learner/blob/9a8afa2d5e5fbd31e180d63c7b45ee4a4cfb6162/Deep%20Learning/Deep%20Learning%20Specialization%20from%20deeplearning.ai/0_gradient%20descent%20on%20m%20example%201.png)
-
+  - two weakness with this calculation:
+    - to implement logistic regression this way, you end up writing two for loops
+      - the first for loop is for loop over the m training examples
+      - the second for loop is for a for loop over n features over here
+    - without using explicit for loops is important and will help you to scale to much bigger datasets: vectorization
  
 ### python and vectorization
+vectorization:
+- ![0_vectorization vs non vectorization examples](https://github.com/tinghe14/MLE-Learner/blob/9a6171e97008883fdca58b39efb370f7d75c887d/Deep%20Learning/Deep%20Learning%20Specialization%20from%20deeplearning.ai/0_vectorization%20vs%20non%20vectorization%20examples.png)
+  - 300 times fasgter
+  - CPU and GPU both have parallization instructions. This basically means is that, if you use built-in functions such as np.function or other functions that don't require you explicity implementing a for loop. It enables python Pi to take much better advantage of parallelism to do your computations much faster
 ### programming assignments
