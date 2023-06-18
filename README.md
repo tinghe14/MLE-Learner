@@ -14,11 +14,12 @@ $`\textcolor{green}{\text{3}}`$
 # Table of Contents (ongoing)
 1. [coding language](#cl)
       - [python feature](#pf)
-      - object orient programming
-      - vectorize: numpy
+      - [python object orient programming](#opp)
+      - [python data structure](#pds)
+      - [python data sciences package: numpy and pandas](#pdspnap)
       - [basic algorithm from scratch](#bafs1)
       - [pytorch syntax overview](#pso)
-      - [regular expression](#re)
+      - [python regular expression](#re)
 3. [software design and unit test](#sdut)
       - object orient design
       - git
@@ -52,18 +53,27 @@ $`\textcolor{green}{\text{3}}`$
 <a id='cl'></a>
 ### Python Feature
 <a id='pf'></a>
-- my note - [python]()
+- tbc my note - [python](https://github.com/tinghe14/MLE-Learner/blob/45ce07d71a72f79532017089325163ea87217cd2/Coding%20Language/Python%20Feature/0_begin2advance.md)
 - blog in Chinese - [os package 1](https://blog.csdn.net/longshenlmj/article/details/13294871), [os package 2](https://zhuanlan.zhihu.com/p/600048459): deal with path
+### python object orient programming
+<a id='oop'></a>
+- tbsummarize - my note in Chinese - [OOP](https://blog.csdn.net/u010701274/category_11662768.html?spm=1001.2014.3001.5482)
+### Python Data Structure
+<a id='pds'></a>
+- tbsummarize - my note in Chinese - [Data Structure](https://blog.csdn.net/u010701274/category_11690409.html)
+### Python Data Sciences Package: Numpy and Pandas
+<a id='pdspnap'></a>
+- tbsummarize - my note in Chinese - [Numpy](https://blog.csdn.net/u010701274/article/details/121036600);[Pandas](https://blog.csdn.net/u010701274/article/details/121204106)
 ### Basic Algorithms from scratch
 <a id='bafs1'></a>
-- [sorting](https://github.com/tinghe14/MLE-Learner/blob/babadbb78f3d3b3a9cf939d371975ad200ffff71/Coding%20Language/Basic%20Algorithm%20from%20Scrach/sorting.md)
+- my note - [sorting](https://github.com/tinghe14/MLE-Learner/blob/babadbb78f3d3b3a9cf939d371975ad200ffff71/Coding%20Language/Basic%20Algorithm%20from%20Scrach/sorting.md)
 ### pytorch syntax overview
 <a id='pso'></a>
 - my note - [Pytorch in Chinese](https://github.com/tinghe14/MLE-Learner/blob/cffde655d457b99a9a4a83f43e3b6f902bbaaf7a/Coding%20Language/Pytorch%20Syntax%20Overview/Pytorch.md): pycharm IDE + important modules for training and validating nn models including tensorboard
 ### regular expression
 <a id='re'></a>
-- [post](https://pynative.com/python-find-position-of-regex-match-using-span-start-end/)
-- [post](https://www.geeksforgeeks.org/re-matchobject-group-function-in-python-regex/)
+- blog in Chinese - [post](https://blog.csdn.net/u010701274/article/details/122235661)
+- blog - [post](https://blog.csdn.net/u010701274?type=blog)
 
 # Software Design and Unit Test
 <a id='sdut'></a>
