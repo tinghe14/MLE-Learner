@@ -56,6 +56,19 @@ gradient descent on m examples
 ### python and vectorization
 vectorization:
 - ![0_vectorization vs non vectorization examples](https://github.com/tinghe14/MLE-Learner/blob/9a6171e97008883fdca58b39efb370f7d75c887d/Deep%20Learning/Deep%20Learning%20Specialization%20from%20deeplearning.ai/0_vectorization%20vs%20non%20vectorization%20examples.png)
-  - 300 times fasgter
   - CPU and GPU both have parallization instructions. This basically means is that, if you use built-in functions such as np.function or other functions that don't require you explicity implementing a for loop. It enables python Pi to take much better advantage of parallelism to do your computations much faster
+
+vectorizing logistic regression's gradient output
+- without any for loop
+  - ![0 without any for loop](https://github.com/tinghe14/MLE-Learner/blob/30779c02647daafe2ef2fe32c8e75d781419f2e8/Deep%20Learning/Deep%20Learning%20Specialization%20from%20deeplearning.ai/0%20without%20any%20for%20loop.png)
+
+multi iterations of gradient descent update for logistic regression
+- there is an outermost for loop for multi iterations, don't think you can get rid of that
+- ![0 gradient descent vectorized logistic regression](https://github.com/tinghe14/MLE-Learner/blob/cc0d0acb27f5d4ab83fab5675784c22d92125290/Deep%20Learning/Deep%20Learning%20Specialization%20from%20deeplearning.ai/0%20gradient%20descent%20vectorized%20logistic%20regression.png)
+
+a note on python/numpy vectors
+- np.random.randn(5): generate a ranked 1 array with output of one squared bracket only, it is not a row vector or column vector, can have some subtle errors which are hard to debug, such as a = np.random.rand(5); b=a.T; but np.dot(a, b) will not be a matrix, it is a single number which is not expected as we want
+- np.random.randn((5,1)): generate a row vector with output of tow squared brackets, recommend to use this one
+- if not sure, recommend to use assert or reshape, they are inexpensive to use: assert(a.shape == (5,1)) or a = a.reshape((5,1))
+
 ### programming assignments
