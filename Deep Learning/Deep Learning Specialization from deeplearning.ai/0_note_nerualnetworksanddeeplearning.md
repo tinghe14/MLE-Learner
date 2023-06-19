@@ -27,7 +27,7 @@ logistic regression: y_hat = P(y=1 | x), when training the logistic regression, 
  - notation: i superscript means the ith example
  - loss function: is a function to measure how good output y_hat is when the true label is y
   - might seems nature to use square error, but in logistic regression people don't usually do this. Beacuse when you come to learn the parameters, it is an optmization problem. it is non-convex which means when applying gradient descent, you may end up with many local optima, may not find a global optimum
-    - $`\textcolor{red}{\text{real loss function of logistic reg which is convex: -ylogy_hat - (1-y)log(1-yhat)}}`$
+    - $`\textcolor{red}{\text{real loss function of logistic reg which is convex: -ylogyhat - (1-y)log(1-yhat)}}`$
     - some intuitions on why this loss function makes sense
     - we want to make it smaller
     - if y=1, Loss = -logy_hat -> want y_hat to be large because y_hat is you know the sigmoid function, it can never be bigger than one
