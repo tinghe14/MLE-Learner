@@ -27,7 +27,7 @@ logistic regression: y_hat = P(y=1 | x), when training the logistic regression, 
  - notation: i superscript means the ith example
  - loss function: is a function to measure how good output y_hat is when the true label is y
   - might seems nature to use square error, but in logistic regression people don't usually do this. Beacuse when you come to learn the parameters, it is an optmization problem. it is non-convex which means when applying gradient descent, you may end up with many local optima, may not find a global optimum
-    - $`\textcolor{red}{\text{real loss function of logistic reg which is convex: -ylogyhat - (1-y)log(1-yhat)}}`$
+    - negative log likelihood cost: $`\textcolor{red}{\text{real loss function of logistic reg which is convex: -ylogyhat - (1-y)log(1-yhat)}}`$; more general form/; [cross entroy](https://en.wikipedia.org/wiki/Cross_entropy#Cross-entropy_error_function_and_logistic_regression)
     - some intuitions on why this loss function makes sense
     - we want to make it smaller
     - if y=1, Loss = -logy_hat -> want y_hat to be large because y_hat is you know the sigmoid function, it can never be bigger than one
@@ -70,5 +70,11 @@ a note on python/numpy vectors
 - np.random.randn(5): generate a ranked 1 array with output of one squared bracket only, it is not a row vector or column vector, can have some subtle errors which are hard to debug, such as a = np.random.rand(5); b=a.T; but np.dot(a, b) will not be a matrix, it is a single number which is not expected as we want
 - np.random.randn((5,1)): generate a row vector with output of tow squared brackets, recommend to use this one
 - if not sure, recommend to use assert or reshape, they are inexpensive to use: assert(a.shape == (5,1)) or a = a.reshape((5,1))
+
+Quiz:
+- Suppose x is a (8,1) array. Which of the following is a valid reshape? A. x.reshape(-1, 3); B. x.reshape(2,2,2) -> B: this requires that 8 = n*3 where n is an unknown size to be determined. N need to be a integer
+
+Practice Programming Assignment:
+- https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html: 
 
 ### programming assignments
