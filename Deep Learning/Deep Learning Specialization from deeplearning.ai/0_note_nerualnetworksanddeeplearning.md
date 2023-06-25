@@ -270,3 +270,5 @@ plt.xlabel('iterations (per hundreds)')
 plt.title("Learning rate =" + str(logistic_regression_model["learning_rate"]))
 plt.show()
 ~~~
+
+# W3: Shallow Neural Networks
