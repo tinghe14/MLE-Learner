@@ -22,6 +22,7 @@ $`\textcolor{green}{\text{3}}`$
       - [python regular expression](#re)
 3. [software design and unit test](#sdut)
       - object orient design
+      - linux command
       - git
       - unit test
       - web development
