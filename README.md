@@ -40,8 +40,9 @@ $`\textcolor{green}{\text{3}}`$
       - [docker](#docker)
 11. machine learning
       - basic algorithm from scrach
-13. natural lanuage processing
+13. [natural lanuage processing](#nlp)
       - basic algorithm from scrach
+      - [LLM in action](#llmia)
 14. [deep learning](#dl)
       - basic algorithm from scratch
       - [deeplearning.ai course](#dlaic)
@@ -90,7 +91,13 @@ $`\textcolor{green}{\text{3}}`$
 - my note - [deploy AI model on GCP](https://github.com/tinghe14/MLE-Learner/blob/4384baf120a54c55f11ca2b0d3a2ed9342e0e246/Distributed%20Computing%20or%20Cloud%20Computing/README.md)
 ### docker
 <a id='docker'></a>
-- my note -
+- tbc my note -
+
+# Natural Language Processing
+<a id='nlp'></a>
+### LLM in action
+<a id='llmia'> 
+- my note - [Chinese Video from Bilibili]()
 
 # Deep Learning
 <a id='dl'></a>
