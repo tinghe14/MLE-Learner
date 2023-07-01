@@ -27,8 +27,8 @@ $`\textcolor{green}{\text{3}}`$
       - unit test
       - web development
       - [computer architecture](#ca)
-5. machine learning system design
-      - educative course
+5. [machine learning system design](#mlsd)
+      - [educative course](#ec)
       - youtuber 
       - technical blog
       - research paper
@@ -83,7 +83,12 @@ $`\textcolor{green}{\text{3}}`$
 <a id='ca'></a>
 - [computer memory architecture](https://github.com/tinghe14/MLE-Learner/blob/7f686e86a8c86761d6068b0e69517632881cd9d7/Software%20Design%20and%20Unit%20Test/Computer%20Architecture/computer_memory_hierarchy.md)
 
-
+# Machine Learning System Design
+<a id='mlsd'></a>
+### Educative Course
+<a id='ec'></a>
+- my note - [Grokking the Machine Learning Interview]()
+  
 # Distributed Computing or Cloud Computing
 <a id='dccc'></a>
 ### GCP
