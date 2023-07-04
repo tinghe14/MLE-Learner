@@ -153,5 +153,18 @@ online experimentation
   - ![experimental framework stages](https://github.com/tinghe14/MLE-Learner/blob/bac4249aca49f01f2d4bb39d1986af7fcbf24aa3/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/experimental%20framework%20stages.png)
 
 embeddings
+- embedding:
+  - Embeddings enable the encoding of entities (e.g., words, docs, images, person, ad, etc.) in a low dimensional vector space such that it captures their semantic information. Capturing semantic information helps to identify related entities that occur close to each other in the vector space
+  - Usually, they are generated using neural networks. A neural network architectures can be set up easily to learn a dense representation of entities.
+- text embedding:
+  - word2vec: Word2vec produces word embeddings by using shallow neural networks (having a single hidden layer) and self-supervised learning from a large corpus of text data. Word2vec is self-supervised as it trains a model by predicting words from other words that appear in the sentence(context). So, it can utilize tons of text data available in books, Wikipedia, blogs, etc. to learn term representation
+    - Word2vec uses a simple but powerful idea to use neighboring words to predict the current word and in the process, generates word embeddings. Two networks to generate these embeddings are:
+      - Continuous bag of words (CBOW) tries to predict the current word from its surrounding words by optimizing for following loss function:
+      - ![CBOW loss](https://github.com/tinghe14/MLE-Learner/blob/45cc232e3ed1e02171f19160f8309227bcfd994f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/cbow%20loss.png)
+      - skipgram: we try to predict surrounding words from the current word. The loss function will now look like:
+      - ![skipgram loss](https://github.com/tinghe14/MLE-Learner/blob/45cc232e3ed1e02171f19160f8309227bcfd994f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/skipgram%20loss.png)
+- visual embedding
+- learning embeddings for a particular learning task
+- network/relationship-based embedding
 transfer learning
 model debugging and testing
