@@ -134,6 +134,24 @@ The first step will help you to build content profiles. Whereas, the second step
   - bootstrapping new items:Sometimes we are dealing with systems in which new items are added frequently. The new items may not garner a lot of attention, so we need to boost them to increase their visibility. For example, in the movie recommendation system, new movies face the cold start problem. We can boost new movies by recommending them based on their similarity with the user’s already watched movies, instead of waiting for the new movies to catch the attention of a user by themselves. Similarly, we may be building a system to display ads, and the new ads face the cold start problem. We can boost them by increasing their relevance scores a little, thereby artificially increasing their chance of being viewed by a person.
 
 online experimentation
+- a team can have multiple hypotheses that need to be validated via experimentation. So to test the hypotheses, should the ML system v0.2 be created and deployed in the production environment? running online experiment
+  - running an online experiment: A/B testing is very beneficial for gauging the impact of new features or changes in the system on the user experience. It is a method of comparing two versions of a webpage or app against each other simultaneously to determine which one performs better. In an A/B experiment, a webpage or app screen is modified to create a second version of the same page. The original version of the page is known as the control and the modified version of the page is known as the variation.
+    - the null hypothesis: H0 is when the design change will not have an effect on variation. If we fail to reject the null hypothesis, we should not launch the new feature.
+    - the alternative hypothesis:  H1 is alternate to the null hypothesis whereby the design change will have an effect on the variation. If the null hypothesis is rejected, then we accept the alternative hypothesis and we should launch the new feature. Simply put, the variation will go in production.
+    - power analysis: to d to see the impact of conversion. Half of the traffic is sent to the control, and the other half is diverted towards the variation.
+    - statistical anlysis: to determine if the number of successes in the variant is significantly better from the control
+    - measuring results:
+      - computing statistical significance: P-value is used to help determine the statistical significance of the results. In interpreting the p-value of a significance test, a significance level (alpha) must be specified.
+        -  The significance level is a boundary for specifying a statistically significant finding when interpreting the p-value. A commonly used value for the significance level is 5% written as 0.05.
+        -  The result of a significance test is claimed to be “statistically significant” if the p-value is less than the significance level.
+           - p <= alpha: reject H0 - launch the new feature; p > alpha: fail to reject H0 - do not launch the new feature
+           - If an A/B test is run with the outcome of a significance level of 95% (p-value ≤ 0.05), there is a 5% probability that the variation that we see is by chance.
+    - measuring long term effects:
+      - In some cases, we need to be more confident about the result of an A/B experiment when it is overly optimistic.
+      - back testing:To confirm the hypothesis and be more confident about the results, we can perform a backtest. Now we change criteria, system A is the previous system B, and vice versa. Do we lose gains? Is the gain caused by an A/B experiment equal to the loss by B/A experiment? Assume that the A/B experiment gave a gain of 5% and B/A experiment gave a loss of 5%. This will ensure that the changes made in the system improved performance.
+      - long-running A/B tests: In a few experiments, one key concern could be that the experiment can have a negative long term impact since we do A/B testing for only a short period of time. Will any negative effects start to appear if we do a long term assessment of the system subject to variation?The long-running experiment, which measures long-term behaviors, can also be done via a backtest. We can launch the experiment based on initial positive results while continuing to run a long-running backtest to measure any potential long term effects. If we can notice any significant negative behavior, we can revert the changes from the launched experiment.
+  - ![experimental framework stages](https://github.com/tinghe14/MLE-Learner/blob/bac4249aca49f01f2d4bb39d1986af7fcbf24aa3/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/experimental%20framework%20stages.png)
+
 embeddings
 transfer learning
 model debugging and testing
