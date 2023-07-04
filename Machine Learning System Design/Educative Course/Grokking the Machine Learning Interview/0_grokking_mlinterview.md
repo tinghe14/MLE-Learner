@@ -81,3 +81,18 @@ Important steps that are mostly common among different ML-based systems:
 
 ## Practical ML techniques/concept
 <a id='pmtc'></a>
+performance and capacity considerations
+- as we work on a machine learning based system, our goal is generally to improve our metrics (engagement rate, etc). While ensuring that we meet the capacity and performance requirement
+- ml algorithms have 3 different types of complexities
+  - training complexity: time taken by it to train the model for a given task
+  - evaluation complexity: time taken by it to evaluate the input at testing time
+  - sample complexity: total number of training samples required to learn a target function successfully (Sample complexity changes if the model capacity changes. For example, for a deep neural network, the number of training examples has to be considerably larger than decision trees and linear regression)
+- ![comparision of training and evaluation complexities](https://github.com/tinghe14/MLE-Learner/blob/aa7a852891ec281caf9dd48240664b0374898c7e/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/comparision%20of%20training%20and%20evaluation%20complexities.png)
+- techniques to boost compacity:
+  - distributed system: we will distribute the load of a single query among multiple shards, e.g., we can divide the load among 1000 machines and can still execute our fast model on 100 million documents in 100ms (100s/1000)
+  - funnel-based approach: start with a relatively fast model when you have the most number of documents;  In every later stage, we continue to increase the complexity (i.e. more optimized model in prediction) and execution time but now the model needs to run on a reduce number of documents e.g. our first stage could use a linear model and final stage can use a deep neural network.
+    - In ML systems like search ranking, recommendation, and ad prediction, the layered/funnel approach to modeling is the right way to solve for scale and relevance while keeping performance high and capacity in check
+online experimentation
+embeddings
+transfer learning
+model debugging and testing
