@@ -22,7 +22,7 @@ what to expect in a machine learning interview:
   - In order to answer such questions, the candidates should consider the following approach.
   - ![approach mlsd question](https://github.com/tinghe14/MLE-Learner/blob/bca807154e56615749720b044e15db6dccbd8d11/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/approach%20mlsd%20question.png)
  
-Important steps that are mostly common among different ML-based systems:
+### Important steps that are mostly common among different ML-based systems:
 - exs for ml system questions:
   - build a system that shows relevant ads for search engines
   - extract all persons, locations, and organizations from a given corpus of documents
@@ -81,7 +81,7 @@ Important steps that are mostly common among different ML-based systems:
 
 ## Practical ML techniques/concept
 <a id='pmtc'></a>
-performance and capacity considerations
+### performance and capacity considerations
 - as we work on a machine learning based system, our goal is generally to improve our metrics (engagement rate, etc). While ensuring that we meet the capacity and performance requirement
 - ml algorithms have 3 different types of complexities
   - training complexity: time taken by it to train the model for a given task
@@ -93,7 +93,7 @@ performance and capacity considerations
   - funnel-based approach: start with a relatively fast model when you have the most number of documents;  In every later stage, we continue to increase the complexity (i.e. more optimized model in prediction) and execution time but now the model needs to run on a reduce number of documents e.g. our first stage could use a linear model and final stage can use a deep neural network.
     - In ML systems like search ranking, recommendation, and ad prediction, the layered/funnel approach to modeling is the right way to solve for scale and relevance while keeping performance high and capacity in check
 
-training data collection strategies
+### training data collection strategies
 - collection techniques
   - user's interaction with pre-existing system (online):
     - the early version is a rule-based system. With the rule-based system in place, you build an ML system for the task (which is then iteratively improved). So when you build the ML system, you can utilize the user's interaction with the prevuious system to generate training data for model training
@@ -133,7 +133,7 @@ The first step will help you to build content profiles. Whereas, the second step
     - ![remove bias in recommendation system](https://github.com/tinghe14/MLE-Learner/blob/8d789cda8fcc1eef6f5310aedd9da090795b11e2/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/remove%20bias%20in%20recommendation%20system.png)
   - bootstrapping new items:Sometimes we are dealing with systems in which new items are added frequently. The new items may not garner a lot of attention, so we need to boost them to increase their visibility. For example, in the movie recommendation system, new movies face the cold start problem. We can boost new movies by recommending them based on their similarity with the user’s already watched movies, instead of waiting for the new movies to catch the attention of a user by themselves. Similarly, we may be building a system to display ads, and the new ads face the cold start problem. We can boost them by increasing their relevance scores a little, thereby artificially increasing their chance of being viewed by a person.
 
-online experimentation
+### online experimentation
 - a team can have multiple hypotheses that need to be validated via experimentation. So to test the hypotheses, should the ML system v0.2 be created and deployed in the production environment? running online experiment
   - running an online experiment: A/B testing is very beneficial for gauging the impact of new features or changes in the system on the user experience. It is a method of comparing two versions of a webpage or app against each other simultaneously to determine which one performs better. In an A/B experiment, a webpage or app screen is modified to create a second version of the same page. The original version of the page is known as the control and the modified version of the page is known as the variation.
     - the null hypothesis: H0 is when the design change will not have an effect on variation. If we fail to reject the null hypothesis, we should not launch the new feature.
@@ -152,7 +152,7 @@ online experimentation
       - long-running A/B tests: In a few experiments, one key concern could be that the experiment can have a negative long term impact since we do A/B testing for only a short period of time. Will any negative effects start to appear if we do a long term assessment of the system subject to variation?The long-running experiment, which measures long-term behaviors, can also be done via a backtest. We can launch the experiment based on initial positive results while continuing to run a long-running backtest to measure any potential long term effects. If we can notice any significant negative behavior, we can revert the changes from the launched experiment.
   - ![experimental framework stages](https://github.com/tinghe14/MLE-Learner/blob/bac4249aca49f01f2d4bb39d1986af7fcbf24aa3/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/experimental%20framework%20stages.png)
 
-embeddings
+### embeddings
 - embedding:
   - Embeddings enable the encoding of entities (e.g., words, docs, images, person, ad, etc.) in a low dimensional vector space such that it captures their semantic information. Capturing semantic information helps to identify related entities that occur close to each other in the vector space
   - Usually, they are generated using neural networks. A neural network architectures can be set up easily to learn a dense representation of entities.
@@ -177,7 +177,7 @@ embeddings
     - In all the above scenarios, the retrieval and ranking of results for a particular user (or query) are mostly about predicting how close they are. Therefore, having an embedding model that projects these documents in the same embedding space can vastly help in the retrieval and ranking tasks of recommendation, search, feed-based, and many other ML systems.We can generate embeddings for both the above-discussed pairs of entities in the same space by creating a two-tower neural network model that tries to encode each item using their raw features. The model optimizes the inner product loss such that positive pairs from entity interactions have a higher score and random pairs have a lower score. Let’s say the selected pairs of entities (from a graph or based on interactions) belong to set A. We then select random pairs for negative examples. The loss function will look like
     - ![two tower model](https://github.com/tinghe14/MLE-Learner/blob/995f9380257682f2ffe46cf8780a9abd8a0db4fc/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/two%20tower%20model.png)
 
-transfer learning
+### transfer learning
 - Transfer learning is the task of using a pre-trained model and applying it to a new task, i.e., transferring the knowledge learned from one task to another. This is useful because the model doesn’t have to learn from scratch and can achieve higher accuracy in less time as compared to models that don’t use transfer learning
 - tranfer learning techniques can be utilized in one or both of the above ways depending on the following two factors:
   1. size of our supervised training dataset:
@@ -192,4 +192,38 @@ model debugging and testing
     - case 3: fine tuning the entire model: If the new data set is larger, then we will load the weights of the pre-trained model and fine-tune the entire network. This will definitely increase our training time as well but should help us optimize our learning task when we have significant training data.
   - natural language processing: For this, we need to generate the dense representation of textual terms. A few of the popular term representation models that use a self-supervised learning approach, trained on massive datasets are word2vec, BERT, and ELMO. The term representation based on these models capture their semantic meanings. Hence, we can transfer knowledge from this learned task in many of the NLP tasks. Through the transfer learning approach, we can now utilize these embeddings in a NER classifier, spam detector classifier, search ranking, language understanding, etc. and can significantly improve the quality of these ML models.
  
-Model debugging and testing
+### Model debugging and testing
+building model v1: 
+- ![important steps in the building model v1](https://github.com/tinghe14/MLE-Learner/blob/16bf864db999a8130d4ea6debc36e74494aaa566/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/important%20steps%20in%20the%20building%20model%20v1.png)
+- It’s important to get version 1 launched to the real system quickly rather than spending too much time trying to optimize it. For example, if our AUC is 0.7 and it’s better than the current system with AUC 0.68, it’s generally a better idea to take model online and then continue to iterate to improve the quality. The reason is primarily that model improvement is an iterative process and we want validation from real traffic and data along with offline validation. We will look at various ideas that can help in that iterative development in the following sections.
+
+deploying and debugging v1 model:
+- might not work as expected and results don’t look as good as we anticipated offline. Let’s look at a few failure scenarios that can happen at this stage and how to debug them.
+  - change in feature distribution:
+    - Let’s consider an example of an Entity linking system that is trained using a readily available Wikipedia dataset. As we start using the system for real traffic, the traffic that we are now getting for finding entities is a mix of Wikipedia articles as well as research papers. Given the model wasn’t trained on that data, its feature distribution would be a lot different than what it was trained on. Hence it is not performing as well on the research articles entity detection.
+    - Another scenario could be a significant change in incoming traffic because of seasonality. Let’s consider an example of a search system trained using data for the last 2 weeks of December, i.e., mostly holiday traffic. If we deploy this system in January, the queries that it will see will be vastly different than what it was trained on and hence not performing as well as we observed in our offline validation.
+  - feature logging issue:
+    -  if the model doesn’t perform as well as we anticipated online, it would be good to see if feature generation logic is the same for offline training as well as online serving part of model evaluation.
+    -  eg: Suppose we build an ads click prediction model. The model is trained on historical ad engagement. We then deploy it to predict the ads engagement rate. Now the assumption is that the features generated for the model offline would exactly be the same for run-time evaluation. Let’s assume that we have one important feature/signal for our model that’s based on historical advertiser ad impressions. During training, we compute this feature by using the last 7 days’ impression. But, the logic to compute this feature at model evaluation time uses the last 30 days of data to compute advertiser impressions. Because of this feature computed differently at training time and evaluation time, it will result in the model not performing well during online serving. It would be worth comparing the features used for training and evaluation to see if there is any such discrepancy.
+  - overfitting:
+    -  One good way of ensuring that we don’t get into this problem is to use a hidden test set which is not used for tuning hyperparameters and only use it for final model quality measurement.
+    -  Another important part is to have a comprehensive and large test set to cover all possible scenarios in a fairly similar distribution to how we anticipate them in live traffic. For example, consider an image object prediction system whose test set only has large-sized objects - (covering 50% pixels or more of the image) for 90% samples and small-sized objects for 10% samples (covering 10% pixels or less). If the live traffic has the opposite distribution of large and small size objects, then the model might not perform well on the live set.
+  - underfitting:
+
+iterative model impropvement:
+- The best way to iterative improve model quality is to start looking at failure cases of our model prediction and using that come up with the ideas that will help in improving model performance in those cases.
+  - missing important feature: Digging deeper into failures examples can identify missing features that can help us perform better in failures cases, e.g., consider a scenario where a movie actually liked by the user was ranked very low by our recommendation system. On debugging, we figure out that the user has previously watched two movies by the same actor, so adding a feature on previous ratings by the user for this movie actor can help our model perform better in this case.
+  - insufficient training examples:
+
+debugging large scale systems:
+- In the case of debugging large scale systems with multiple components(or models), we need to see which part of the overall system is not working correctly. It could be done for one failure example or over a set of examples to see where the opportunity lies to improve the metrics.
+- The following are a few key steps to think about iterative model improvement for large scale end to end ML systems:
+  - identify the component:
+    - This accounts for finding the architectural component resulting in a high number of failures in our failure set. In order to see the cause of failure, we will look at each layers’ performance to understand the opportunity to significantly improve the quality of our search system. Let’s assume that our search system has two key components 1) Document selection 2) Ranking of selected documents. Document selection focus is to ensure that all the top relevant documents get selected for the query while Ranker then ensures that our rank order is correct based on the relevance of the top 100 documents. If we look at few hundred failures of our overall search system, we should be able to identify the component that’s resulting in more failures and as a result, decide to improve the quality of that component, e.g., if 80% of our overall search system failures are because of the ideal document not being selected in candidate selection component, we will debug the model deeply in that layer to see how to improve the quality of that model. Similarly, if ideal documents are mostly selected but are ranked lower by our ranking component, we will invest in finding the reason for failures in that layer and improve the quality of our ranking model.
+  - improve the quality of component:
+    - Some of the model improvement methods that we have discussed above like adding more training data, features, modeling approach in case of overfitting and underfitting will still be the same once we identify the component that needs work, e.g., if we identify that the candidate selection layer needs improvement in our search, we will try to see missing features, add more training data or play around with ML model parameters or try a new model.
+    - ![fix large scale 1](https://github.com/tinghe14/MLE-Learner/blob/5e180a8a50813afcb74194ed53bafc0ebc307d2f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/fix%20large%20scale%201.png)
+    - ![fix large scale 2](https://github.com/tinghe14/MLE-Learner/blob/5e180a8a50813afcb74194ed53bafc0ebc307d2f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/fix%20large%20scale%202.png)
+    - ![fix large scale 3](https://github.com/tinghe14/MLE-Learner/blob/5e180a8a50813afcb74194ed53bafc0ebc307d2f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/fix%20large%20scale%203.png)
+    - ![fix large scale 4](https://github.com/tinghe14/MLE-Learner/blob/5e180a8a50813afcb74194ed53bafc0ebc307d2f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/fix%20large%20scale%204.png)
+    - ![fix large scale 5](https://github.com/tinghe14/MLE-Learner/blob/5e180a8a50813afcb74194ed53bafc0ebc307d2f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/fix%20large%20scale%205.png)
