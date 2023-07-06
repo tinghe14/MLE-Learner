@@ -1,7 +1,7 @@
 Grokking the Machine Learning Interview
 - [Introduction](#intro)
 - [Practical ML techniques/concept](#pmtc)
-- Search ranking
+- [Search ranking](#sr)
 - Feed based system
 - Recommendation system
 - Self-driving car: image segementation
@@ -227,3 +227,36 @@ debugging large scale systems:
     - ![fix large scale 3](https://github.com/tinghe14/MLE-Learner/blob/5e180a8a50813afcb74194ed53bafc0ebc307d2f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/fix%20large%20scale%203.png)
     - ![fix large scale 4](https://github.com/tinghe14/MLE-Learner/blob/5e180a8a50813afcb74194ed53bafc0ebc307d2f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/fix%20large%20scale%204.png)
     - ![fix large scale 5](https://github.com/tinghe14/MLE-Learner/blob/5e180a8a50813afcb74194ed53bafc0ebc307d2f/Machine%20Learning%20System%20Design/Educative%20Course/Grokking%20the%20Machine%20Learning%20Interview/fix%20large%20scale%205.png)
+
+## Search Ranking
+<a id='sr'></a>
+### Problem Statement
+- design a search relevance system for a search engine
+- Clarify questions by 3 aspects: scope, scale, personalization 
+    - scope:
+        - Is it a general search engine like Google or Bing or a specialized search engine like Amazon products search? -> Build a generic search engine that returns relevant results for queries like “Richard Nixon”, “Programming languages” etc. This will require you to build a machine learning system that provides the most relevant results for a search query by ranking them in order of relevance.
+    - Scale:
+        - How many websites exist that you want to enable through this search engine
+        - How many requests per second do you anticipate to handle? -> We will assume that you have billions of documents to search from, and the search engine is getting around 10K queries per second (QPS). Understanding this scale is important to architect our relevance system. For example, later in the chapter, we will go over the funnel-based approach where you will continue to increase model complexity and reduce document set, as you go down the funnel for this large scale search system.
+    - Personalization:
+        - whether the searcher is a logged-in user or not. This will define the level of personalization that you can incorporate to improve the relevance of our results. You will assume that the user is logged in and you have access to their profile as well as their historical search data.
+    
+### Metrics
+- online metrics: click through rate, We refer to metrics that are computed as part of user interaction in a live system as Online metrics.
+    - click-through rate: number of clicks / number of impressions
+      - num of impressions: an impression means a view. Eg, when a search engine result page loads and the user has seen the result, you will consider that as an impression. A click on that result is your success
+    - successful session rate:
+      - one problem of click-through rate: unsuccessful clicks will also be counted towards search success. For example, this might include short clicks where the searcher only looked at the resultant document and clicked back immediately.
+      - You could solve this issue by filtering your data to only successful clicks, i.e., to only consider clicks that have a long dwell time.
+        - Dwell time is the length of time a searcher spends viewing a webpage after they’ve clicked a link on a search engine result page (SERP).
+        - therefore session success rate = no. of success sessions / no. of total sessions
+    - zero-click search: A SERP may answer the searcher’s query right at the top such that the searcher doesn’t need any further clicks to complete the search. The click-through rate would not work in this case (but your definition of a successful session should definitely include it). We can fix this using a simple technique shown below.
+      - time to sucess: Until now, we have been considering a single query-based search session. However, it may span over several queries. For example, the searcher initially queries: “italian food”. They find that the results are not what they are looking for and make a more specific query: “italian restaurants”. Also, at times, the searcher might have to go over multiple results to find the one that they are looking for.Ideally, you want the searcher to go to the result that answers their question in the minimal number of queries and as high on the results page as possible. So, time to success is an important metric to track and measure search engine success.
+      - For scenarios like this, a low number of queries per session means that your system was good at guessing what the searcher actually wanted despite their poorly worded query. So, in this case, we should consider a low number of queries per session in your definition of a successful search session.
+- Offline metrics: NDCG, Meanwhile, offline metrics use offline data to measure the quality of your search engine and don’t rely on getting direct feedback from the users of the system.
+### Architectural Components
+### Document Selection
+### Feature Enginerring
+### Training Data Generation
+### Ranking
+### Filtering Results
