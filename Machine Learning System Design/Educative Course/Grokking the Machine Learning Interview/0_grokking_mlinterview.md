@@ -253,7 +253,8 @@ debugging large scale systems:
     - zero-click search: A SERP may answer the searcher’s query right at the top such that the searcher doesn’t need any further clicks to complete the search. The click-through rate would not work in this case (but your definition of a successful session should definitely include it). We can fix this using a simple technique shown below.
       - time to sucess: Until now, we have been considering a single query-based search session. However, it may span over several queries. For example, the searcher initially queries: “italian food”. They find that the results are not what they are looking for and make a more specific query: “italian restaurants”. Also, at times, the searcher might have to go over multiple results to find the one that they are looking for.Ideally, you want the searcher to go to the result that answers their question in the minimal number of queries and as high on the results page as possible. So, time to success is an important metric to track and measure search engine success.
       - For scenarios like this, a low number of queries per session means that your system was good at guessing what the searcher actually wanted despite their poorly worded query. So, in this case, we should consider a low number of queries per session in your definition of a successful search session.
-- Offline metrics: NDCG, Meanwhile, offline metrics use offline data to measure the quality of your search engine and don’t rely on getting direct feedback from the users of the system.
+- Offline metrics: evaluated by trained human raters. These ratings are then aggregated across a query sample to serve as the ground truths
+  - NDCG (normalized discounted cumulative gain): critical evaluation metric for any ranking problem
 ### Architectural Components
 ### Document Selection
 ### Feature Enginerring
