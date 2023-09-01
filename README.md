@@ -38,8 +38,9 @@ $`\textcolor{green}{\text{3}}`$
       - cluster
       - [GCP](#gcp)
       - [docker](#docker)
-11. machine learning
-      - basic algorithm from scrach
+11. [machine learning](#ml)
+      - basic algorithms from scrach
+      - [ml coding](#mlc)
 13. [natural lanuage processing](#nlp)
       - basic algorithm from scrach
       - [LLM in action](#llmia)
@@ -97,6 +98,11 @@ $`\textcolor{green}{\text{3}}`$
 ### docker
 <a id='docker'></a>
 - tbc my note -
+
+# Machine Learning
+<a id='ml'></a>
+### ML coding
+<a id='mlc'></a>
 
 # Natural Language Processing
 <a id='nlp'></a>
