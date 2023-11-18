@@ -2,6 +2,7 @@ Defensive Coding:
 - improve code quality and make code safer
 - ref: https://github.com/ictar/python-doc/blob/master/Others/%E5%9C%A8Python%E4%B8%AD%E8%BF%9B%E8%A1%8C%E9%98%B2%E5%BE%A1%E6%80%A7%E7%BC%96%E7%A8%8B.md
 - ref: https://developer.aliyun.com/article/950051
+- book: 程序员修炼之道：从小工到专家https://awesome-programming-books.github.io/others/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BF%AE%E7%82%BC%E4%B9%8B%E9%81%93%EF%BC%9A%E4%BB%8E%E5%B0%8F%E5%B7%A5%E5%88%B0%E4%B8%93%E5%AE%B6.pdf
 
   Logical guidelines to write application code:
   1. guard clauses: Conduct precondition check of input variable at the top of your code making sure the methods only continue executing when valid input is provided
