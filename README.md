@@ -82,6 +82,8 @@ $`\textcolor{green}{\text{3}}`$
 # Software Design and Unit Test
 <a id='sdut'></a>
 ### Defensive Coding
+<a id='dc'></a>
+- [professional tips](https://github.com/tinghe14/MLE-Learner/blob/main/Software%20Design%20and%20Unit%20Test/Computer%20Architecture/defensive_coding/dc.md)
 ### Computer Architecture
 <a id='ca'></a>
 - [computer memory architecture](https://github.com/tinghe14/MLE-Learner/blob/7f686e86a8c86761d6068b0e69517632881cd9d7/Software%20Design%20and%20Unit%20Test/Computer%20Architecture/computer_memory_hierarchy.md)
