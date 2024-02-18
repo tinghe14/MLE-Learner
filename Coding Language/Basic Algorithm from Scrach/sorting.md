@@ -103,6 +103,7 @@ merge sort(归并排序)：
   - 重复步骤 3 直到某一指针达到序列尾；
   - 将另一序列剩下的所有元素直接复制到合并序列尾。
 ~~~
+#不好，见我leetcode数据结构那本资料上的merge sort写法
 from math import floor
 
 def merge_sort(arr):
